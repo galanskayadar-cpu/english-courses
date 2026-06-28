@@ -1,0 +1,3886 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Р”РµС‚РµР№Р»РёРЅРі-СЃС‚СѓРґРёСЏ | РџРѕР»РёСЂРѕРІРєР°, РєРµСЂР°РјРёРєР°, С…РёРјС‡РёСЃС‚РєР° вЂ” РіР°СЂР°РЅС‚РёСЏ 2 РіРѕРґР°</title>
+    <meta name="description" content="РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Р№ РґРµС‚РµР№Р»РёРЅРі Р°РІС‚РѕРјРѕР±РёР»СЏ. РџРѕР»РёСЂРѕРІРєР° РѕС‚ 8 000 в‚Ѕ, РєРµСЂР°РјРёРєР° РѕС‚ 18 000 в‚Ѕ, С…РёРјС‡РёСЃС‚РєР° РѕС‚ 7 000 в‚Ѕ. Р“Р°СЂР°РЅС‚РёСЏ РґРѕ 2 Р»РµС‚. Р¤РѕС‚РѕРѕС‚С‡С‘С‚. Р’С‹РµР·Рґ Рє РєР»РёРµРЅС‚Сѓ.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+/* ========================================
+   CSS Variables
+   ======================================== */
+:root {
+    --bg-primary: #0D0D0D;
+    --bg-secondary: #141414;
+    --bg-card: #1A1A1A;
+    --accent: #C8A97E;
+    --accent-hover: #D4B896;
+    --accent-glow: rgba(200, 169, 126, 0.3);
+    --text-primary: #FFFFFF;
+    --text-secondary: #A0A0A0;
+    --text-muted: #666666;
+    --border: rgba(200, 169, 126, 0.15);
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+    --radius: 12px;
+    --radius-sm: 8px;
+    --transition: all 0.3s ease;
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+}
+
+/* ========================================
+   Reset & Base
+   ======================================== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    color: inherit;
+}
+
+input {
+    font-family: inherit;
+    border: none;
+    outline: none;
+}
+
+/* ========================================
+   Utilities
+   ======================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.text-accent {
+    color: var(--accent);
+}
+
+.section {
+    padding: 120px 0;
+}
+
+.section--dark {
+    background-color: var(--bg-primary);
+}
+
+.section--darker {
+    background-color: var(--bg-secondary);
+}
+
+.section--cta {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, #1A1A1A 100%);
+}
+
+.section__header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.section__title {
+    font-family: var(--font-heading);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.section__subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section__cta {
+    text-align: center;
+    margin-top: 48px;
+}
+
+/* ========================================
+   Buttons
+   ======================================== */
+.btn {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    text-align: center;
+    box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+    box-shadow: 0 6px 24px var(--accent-glow);
+    transform: translateY(-2px);
+}
+
+.btn--sm {
+    padding: 12px 24px;
+    font-size: 14px;
+}
+
+.btn--lg {
+    padding: 18px 48px;
+    font-size: 18px;
+}
+
+.btn--full {
+    width: 100%;
+}
+
+.btn--outline {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    box-shadow: none;
+}
+
+.btn--outline:hover {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+}
+
+/* ========================================
+   Header
+   ======================================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 16px 0;
+    transition: var(--transition);
+}
+
+.header.scrolled {
+    background-color: rgba(13, 13, 13, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 12px 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    font-family: var(--font-main);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.header__logo-accent {
+    color: var(--accent);
+}
+
+.header__nav {
+    display: flex;
+    gap: 32px;
+}
+
+.header__nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.header__nav-link:hover {
+    color: var(--accent);
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header__phone {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.header__phone:hover {
+    color: var(--accent-hover);
+}
+
+.header__cta {
+    padding: 10px 24px;
+    font-size: 14px;
+}
+
+.header__burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+}
+
+.header__burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-primary);
+    transition: var(--transition);
+}
+
+/* ========================================
+   Mobile Menu
+   ======================================== */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba(13, 13, 13, 0.98);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.mobile-menu__link {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.mobile-menu__link:hover {
+    color: var(--accent);
+}
+
+.mobile-menu__phone {
+    font-size: 18px;
+    color: var(--accent);
+    margin-top: 16px;
+}
+
+.mobile-menu__cta {
+    margin-top: 16px;
+}
+
+/* ========================================
+   Hero
+   ======================================== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero__bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 30%, #16213e 60%, #0f3460 100%);
+    overflow: hidden;
+}
+
+.hero__bg::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at 30% 50%, rgba(200, 169, 126, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 30%, rgba(200, 169, 126, 0.05) 0%, transparent 40%);
+    animation: heroGlow 10s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(5%, -3%) scale(1.1); }
+}
+
+.hero__particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.hero__particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(200, 169, 126, 0.4);
+    border-radius: 50%;
+    animation: particleFloat linear infinite;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0;
+    }
+}
+
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(10, 10, 15, 0.65) 0%, rgba(10, 10, 15, 0.7) 50%, rgba(13, 13, 13, 1) 100%);
+}
+
+.hero__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 177.78vh;
+    min-width: 100%;
+    min-height: 100%;
+    height: 56.25vw;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    padding: 120px 0 80px;
+}
+
+.hero__badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: rgba(200, 169, 126, 0.15);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 24px;
+}
+
+.hero__title {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.hero__subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero__features {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.hero__feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.hero__feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__feature-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.hero__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.hero__cta-note {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.hero__scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero__scroll-line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* ========================================
+   Problems
+   ======================================== */
+.problems__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.problem-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.problem-card:hover {
+    border-color: rgba(200, 169, 126, 0.4);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.problem-card__icon {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    height: 72px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(200, 169, 126, 0.08);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.problem-card:hover .problem-card__icon {
+    background: rgba(200, 169, 126, 0.15);
+    transform: scale(1.05);
+}
+
+.problem-card__icon svg {
+    width: 36px;
+    height: 36px;
+}
+
+.problem-card__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.problem-card__text {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ========================================
+   Solution
+   ======================================== */
+.solution__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.solution__paragraph {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+.solution__benefits {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.benefit {
+    display: flex;
+    gap: 16px;
+}
+
+.benefit__icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(200, 169, 126, 0.15);
+    border-radius: 50%;
+    color: var(--accent);
+    font-size: 14px;
+}
+
+.benefit__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.benefit__text {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.solution__image-placeholder {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, var(--bg-card) 0%, #252525 100%);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+}
+
+.solution__image-placeholder span {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* ========================================
+   Services
+   ======================================== */
+.services__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+    background-color: var(--bg-card);
+    padding: 8px;
+    border-radius: var(--radius-sm);
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services__tabs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.services__tab {
+    padding: 12px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.services__tab:hover {
+    color: var(--text-primary);
+}
+
+.services__tab.active {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+}
+
+.services__panel {
+    display: none;
+}
+
+.services__panel.active {
+    display: block;
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.service-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    position: relative;
+}
+
+.service-card:hover {
+    border-color: rgba(200, 169, 126, 0.4);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-card--featured {
+    border-color: var(--accent);
+    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(200, 169, 126, 0.05) 100%);
+}
+
+.service-card__badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 16px;
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 100px;
+}
+
+.service-card__header {
+    margin-bottom: 12px;
+}
+
+.service-card__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.service-card__meta {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.service-card__price {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.service-card__time {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.service-card__desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.services__note {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 32px;
+}
+
+/* ========================================
+   Portfolio
+   ======================================== */
+.portfolio__slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio__track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.portfolio__slide {
+    flex: 0 0 100%;
+    padding: 0 12px;
+}
+
+.portfolio__card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.portfolio__image-placeholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.portfolio__image-placeholder span {
+    opacity: 0.7;
+}
+
+.portfolio__info {
+    padding: 32px;
+}
+
+.portfolio__car {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.portfolio__services {
+    font-size: 14px;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+.portfolio__result {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.portfolio__time {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.portfolio__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.portfolio__btn {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    font-size: 18px;
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.portfolio__btn:hover {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    border-color: var(--accent);
+}
+
+.portfolio__dots {
+    display: flex;
+    gap: 8px;
+}
+
+.portfolio__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--text-muted);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.portfolio__dot.active {
+    background-color: var(--accent);
+    width: 24px;
+    border-radius: 4px;
+}
+
+.portfolio__cta-text {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+/* ========================================
+   Gallery
+   ======================================== */
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.gallery__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.gallery__item:hover {
+    transform: translateY(-4px);
+}
+
+.gallery__item:hover .gallery__placeholder {
+    border-color: var(--accent);
+}
+
+.gallery__placeholder {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--text-muted);
+    font-size: 13px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: var(--transition);
+}
+
+.gallery__placeholder span {
+    opacity: 0.7;
+    text-align: center;
+    padding: 0 8px;
+}
+
+/* ========================================
+   Process
+   ======================================== */
+.process__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+}
+
+.process__grid::before {
+    content: '';
+    position: absolute;
+    top: 80px;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border), transparent);
+}
+
+.process__step {
+    text-align: center;
+    position: relative;
+}
+
+.process__number {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: 700;
+    color: rgba(200, 169, 126, 0.15);
+    margin-bottom: 16px;
+}
+
+.process__icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.process__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.process__text {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ========================================
+   About
+   ======================================== */
+.about__content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.about__image-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: linear-gradient(135deg, var(--bg-card) 0%, #252525 100%);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+}
+
+.about__image-placeholder span {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.about__master {
+    margin-bottom: 32px;
+}
+
+.about__name {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.about__experience {
+    font-size: 16px;
+    color: var(--accent);
+    margin-bottom: 4px;
+}
+
+.about__cert {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.about__benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.about__benefit {
+    display: flex;
+    gap: 16px;
+}
+
+.about__benefit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(200, 169, 126, 0.15);
+    border-radius: 12px;
+}
+
+.about__benefit-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.about__benefit h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.about__benefit p {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.about__personal {
+    font-size: 16px;
+    color: var(--text-secondary);
+    font-style: italic;
+    padding: 20px;
+    background-color: var(--bg-card);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+/* ========================================
+   Reviews
+   ======================================== */
+.reviews__slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.reviews__track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.reviews__slide {
+    flex: 0 0 100%;
+    padding: 0 12px;
+}
+
+.review-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    position: relative;
+}
+
+.review-card__quote {
+    font-family: var(--font-heading);
+    font-size: 64px;
+    color: rgba(200, 169, 126, 0.2);
+    line-height: 1;
+    margin-bottom: -20px;
+}
+
+.review-card__text {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.review-card__author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.review-card__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.review-card__name {
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+}
+
+.review-card__car {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.review-card__link {
+    font-size: 14px;
+    color: var(--accent);
+}
+
+.review-card__link:hover {
+    color: var(--accent-hover);
+}
+
+.reviews__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.reviews__btn {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    font-size: 18px;
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.reviews__btn:hover {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    border-color: var(--accent);
+}
+
+.reviews__dots {
+    display: flex;
+    gap: 8px;
+}
+
+.reviews__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--text-muted);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.reviews__dot.active {
+    background-color: var(--accent);
+    width: 24px;
+    border-radius: 4px;
+}
+
+/* ========================================
+   FAQ
+   ======================================== */
+.faq__list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq__item {
+    border-bottom: 1px solid var(--border);
+}
+
+.faq__question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.faq__question:hover {
+    color: var(--accent);
+}
+
+.faq__icon {
+    font-size: 24px;
+    color: var(--accent);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+.faq__item.active .faq__icon {
+    transform: rotate(45deg);
+}
+
+.faq__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq__item.active .faq__answer {
+    max-height: 300px;
+    padding-bottom: 24px;
+}
+
+.faq__answer p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ========================================
+   CTA
+   ======================================== */
+.cta__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.cta__image {
+    width: 100%;
+}
+
+.cta__image-placeholder {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, var(--bg-card) 0%, #252525 100%);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+}
+
+.cta__image-placeholder span {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.cta__content {
+    text-align: left;
+}
+
+.cta__title {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.cta__subtitle {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.cta__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.cta__input {
+    width: 100%;
+    padding: 14px 18px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.cta__input::placeholder {
+    color: var(--text-muted);
+}
+
+.cta__input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(200, 169, 126, 0.1);
+}
+
+.cta__note {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.cta__contacts {
+    display: flex;
+    gap: 20px;
+}
+
+.cta__contact {
+    font-size: 14px;
+    color: var(--accent);
+}
+
+.cta__contact:hover {
+    color: var(--accent-hover);
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+.footer {
+    background-color: #0A0A0A;
+    padding: 48px 0 24px;
+}
+
+.footer__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+}
+
+.footer__logo {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer__tagline {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+.footer__phone {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.footer__link {
+    font-size: 14px;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer__link:hover {
+    color: var(--accent);
+}
+
+.footer__address {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.footer__links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer__links a:hover {
+    color: var(--accent);
+}
+
+/* ========================================
+   Mobile CTA
+   ======================================== */
+.mobile-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    padding: 16px;
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-animate="fade-right"] {
+    transform: translateX(-30px);
+}
+
+[data-animate="fade-left"] {
+    transform: translateX(30px);
+}
+
+[data-animate="fade-down"] {
+    transform: translateY(-30px);
+}
+
+[data-animate].animated {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* ========================================
+   Responsive: Tablet
+   ======================================== */
+@media (max-width: 1024px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .section__title {
+        font-size: 32px;
+    }
+
+    .hero__title {
+        font-size: 44px;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__burger {
+        display: flex;
+    }
+
+    .header__cta {
+        display: none;
+    }
+
+    .problems__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .process__grid::before {
+        display: none;
+    }
+
+    .footer__top {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+}
+
+/* ========================================
+   Widget
+   ======================================== */
+.widget {
+    position: fixed;
+    bottom: 100px;
+    right: 24px;
+    z-index: 900;
+}
+
+.widget__btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--bg-primary);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(200, 169, 126, 0.4);
+    transition: var(--transition);
+}
+
+.widget__btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(200, 169, 126, 0.5);
+}
+
+.widget__btn--active {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+.widget__menu {
+    position: absolute;
+    bottom: 68px;
+    right: 0;
+    width: 280px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.widget__menu--active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.widget__option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: left;
+}
+
+.widget__option:hover {
+    background: rgba(200, 169, 126, 0.1);
+}
+
+/* ========================================
+   Modal
+   ======================================== */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.modal--active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal__content {
+    position: relative;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    max-width: 480px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    transform: translateY(20px);
+    transition: var(--transition);
+}
+
+.modal--active .modal__content {
+    transform: translateY(0);
+}
+
+.modal__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.modal__close:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+    border-color: var(--accent);
+}
+
+/* ========================================
+   Quiz
+   ======================================== */
+.quiz__step {
+    display: none;
+}
+
+.quiz__step--active {
+    display: block;
+}
+
+.quiz__progress {
+    height: 4px;
+    background: var(--bg-card);
+    border-radius: 2px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.quiz__progress-bar {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+
+.quiz__question {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.quiz__options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quiz__option {
+    width: 100%;
+    padding: 14px 18px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: 15px;
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transition);
+}
+
+.quiz__option:hover {
+    border-color: var(--accent);
+    background: rgba(200, 169, 126, 0.05);
+}
+
+.quiz__result {
+    text-align: center;
+    padding: 16px 0;
+}
+
+.quiz__result svg {
+    margin-bottom: 16px;
+}
+
+.quiz__result-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.quiz__result-text {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.quiz__cta {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.quiz__result-note {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* ========================================
+   Checklist
+   ======================================== */
+.checklist__title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.checklist__subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.checklist__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checklist__item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.checklist__item input[type="checkbox"] {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.checklist__item label {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.checklist__item input:checked + label {
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+
+.checklist__cta {
+    text-align: center;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.checklist__cta p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+/* ========================================
+   Calculator
+   ======================================== */
+.calc__step {
+    display: none;
+}
+
+.calc__step--active {
+    display: block;
+}
+
+.calc__title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.calc__subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.calc__options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calc__option {
+    width: 100%;
+    padding: 16px 18px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transition);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calc__option:hover {
+    border-color: var(--accent);
+    background: rgba(200, 169, 126, 0.05);
+}
+
+.calc__option-name {
+    font-size: 15px;
+    color: var(--text-primary);
+}
+
+.calc__option-example,
+.calc__option-price {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.calc__result {
+    text-align: center;
+    padding: 16px 0;
+}
+
+.calc__result svg {
+    margin-bottom: 16px;
+}
+
+.calc__result-title {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.calc__result-service {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.calc__result-price {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+.calc__result-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.calc__cta {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.calc__restart {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.calc__restart:hover {
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
+
+/* ========================================
+   Responsive: Mobile
+   ======================================== */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .section__header {
+        margin-bottom: 40px;
+    }
+
+    .section__title {
+        font-size: 28px;
+    }
+
+    .section__subtitle {
+        font-size: 16px;
+    }
+
+    .hero__content {
+        padding: 100px 0 60px;
+    }
+
+    .hero__title {
+        font-size: 32px;
+    }
+
+    .hero__subtitle {
+        font-size: 16px;
+    }
+
+    .hero__features {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .problems__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .solution__content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about__content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .cta__grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .cta__content {
+        text-align: center;
+    }
+
+    .cta__title {
+        font-size: 28px;
+    }
+
+    .cta__contacts {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .mobile-cta {
+        display: block;
+    }
+
+    .portfolio__slide {
+        padding: 0;
+    }
+
+    .gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+/* ========================================
+   Responsive: Small Mobile
+   ======================================== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .hero__title {
+        font-size: 28px;
+    }
+
+    .btn {
+        padding: 14px 28px;
+        font-size: 14px;
+    }
+
+    .btn--lg {
+        padding: 16px 32px;
+        font-size: 16px;
+    }
+
+    .service-card__price {
+        font-size: 24px;
+    }
+
+    .gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .gallery__placeholder {
+        font-size: 11px;
+    }
+
+    .widget {
+        bottom: 80px;
+        right: 16px;
+    }
+
+    .widget__btn {
+        width: 48px;
+        height: 48px;
+    }
+
+    .widget__menu {
+        width: 260px;
+        right: -8px;
+    }
+
+    .modal__content {
+        padding: 24px;
+        max-height: 80vh;
+    }
+
+    .quiz__question {
+        font-size: 18px;
+    }
+
+    .calc__result-price {
+        font-size: 26px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+    <div class="container header__inner">
+        <a href="#" class="header__logo">
+            <span class="header__logo-accent">PREMIUM</span> DETAILING
+        </a>
+        <nav class="header__nav" id="nav">
+            <a href="#services" class="header__nav-link">РЈСЃР»СѓРіРё</a>
+            <a href="#portfolio" class="header__nav-link">Р Р°Р±РѕС‚С‹</a>
+            <a href="#gallery" class="header__nav-link">Р“Р°Р»РµСЂРµСЏ</a>
+            <a href="#about" class="header__nav-link">Рћ РЅР°СЃ</a>
+            <a href="#reviews" class="header__nav-link">РћС‚Р·С‹РІС‹</a>
+            <a href="#faq" class="header__nav-link">Р’РѕРїСЂРѕСЃС‹</a>
+        </nav>
+        <div class="header__right">
+            <a href="tel:+79991234567" class="header__phone">+7 (999) 123-45-67</a>
+            <a href="#cta" class="btn btn--sm header__cta">Р—Р°РїРёСЃР°С‚СЊСЃСЏ</a>
+            <button class="header__burger" id="burger" aria-label="РњРµРЅСЋ">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <nav class="mobile-menu__nav">
+        <a href="#services" class="mobile-menu__link">РЈСЃР»СѓРіРё</a>
+        <a href="#portfolio" class="mobile-menu__link">Р Р°Р±РѕС‚С‹</a>
+        <a href="#gallery" class="mobile-menu__link">Р“Р°Р»РµСЂРµСЏ</a>
+        <a href="#about" class="mobile-menu__link">Рћ РЅР°СЃ</a>
+        <a href="#reviews" class="mobile-menu__link">РћС‚Р·С‹РІС‹</a>
+        <a href="#faq" class="mobile-menu__link">Р’РѕРїСЂРѕСЃС‹</a>
+        <a href="tel:+79991234567" class="mobile-menu__phone">+7 (999) 123-45-67</a>
+        <a href="#cta" class="btn btn--full mobile-menu__cta">Р—Р°РїРёСЃР°С‚СЊСЃСЏ</a>
+    </nav>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero__bg">
+        <iframe class="hero__video" 
+            src="https://rutube.ru/play/embed/35e1b779f755a660b03a4e2869856a4a/?autoplay=1&mute=1&loop=1&controls=0&showTitle=0&showAuthor=0&showLogo=0" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
+        <div class="hero__overlay"></div>
+    </div>
+    <div class="container hero__content">
+        <div class="hero__badge" data-animate="fade-down">7+ Р»РµС‚ РѕРїС‹С‚Р°</div>
+        <h1 class="hero__title" data-animate="fade-up">Р’Р°С€ Р°РІС‚РѕРјРѕР±РёР»СЊ Р±СѓРґРµС‚ РІС‹РіР»СЏРґРµС‚СЊ <span class="text-accent">РєР°Рє РЅРѕРІС‹Р№</span></h1>
+        <p class="hero__subtitle" data-animate="fade-up" data-delay="100">РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Р№ РґРµС‚РµР№Р»РёРЅРі СЃ РіР°СЂР°РЅС‚РёРµР№ РґРѕ 2 Р»РµС‚. Р¤РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ С†РµРЅР° вЂ” Р±РµР· СЃРєСЂС‹С‚С‹С… РґРѕРїР»Р°С‚.</p>
+        <div class="hero__features" data-animate="fade-up" data-delay="200">
+            <div class="hero__feature">
+                <span class="hero__feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L3 7V12C3 17.25 6.75 21.5 12 22.75C17.25 21.5 21 17.25 21 12V7L12 2Z"/>
+                        <path d="M9 12L11 14L15 10"/>
+                    </svg>
+                </span>
+                <span>Р“Р°СЂР°РЅС‚РёСЏ РґРѕ 2 Р»РµС‚</span>
+            </div>
+            <div class="hero__feature">
+                <span class="hero__feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="1" x2="12" y2="23"/>
+                        <path d="M17 5H9.5C8.12 5 7 6.12 7 7.5S8.12 10 9.5 10H14.5C15.88 10 17 11.12 17 12.5S15.88 15 14.5 15H7"/>
+                        <path d="M12 1v2"/>
+                        <path d="M12 21v2"/>
+                    </svg>
+                </span>
+                <span>Р¤РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ С†РµРЅР°</span>
+            </div>
+            <div class="hero__feature">
+                <span class="hero__feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 17H3V7H5"/>
+                        <path d="M7 17C7 17 8 17 9 16L11 13H16L18 16C19 17 20 17 20 17"/>
+                        <circle cx="7" cy="17" r="2"/>
+                        <circle cx="18" cy="17" r="2"/>
+                        <path d="M11 13L12 8H18"/>
+                        <path d="M14 4L16 8"/>
+                    </svg>
+                </span>
+                <span>Р’С‹РµР·Рґ Рє РєР»РёРµРЅС‚Сѓ</span>
+            </div>
+        </div>
+        <div class="hero__cta" data-animate="fade-up" data-delay="300">
+            <a href="#cta" class="btn btn--lg">РЈР·РЅР°С‚СЊ СЃС‚РѕРёРјРѕСЃС‚СЊ Р·Р° 5 РјРёРЅСѓС‚</a>
+            <span class="hero__cta-note">2000+ РґРѕРІРѕР»СЊРЅС‹С… РєР»РёРµРЅС‚РѕРІ</span>
+        </div>
+    </div>
+    <div class="hero__scroll">
+        <div class="hero__scroll-line"></div>
+    </div>
+</section>
+
+<!-- PROBLEMS -->
+<section class="section section--dark" id="problems">
+    <div class="container">
+        <div class="section__header" data-animate="fade-up">
+            <h2 class="section__title">Р—РЅР°РєРѕРјРѕ? Р’Р°С€ Р°РІС‚РѕРјРѕР±РёР»СЊ С‚РµСЂСЏРµС‚ РІРёРґ <span class="text-accent">РєР°Р¶РґС‹Р№ РґРµРЅСЊ</span></h2>
+            <p class="section__subtitle">Р РµР°РіРµРЅС‚С‹, РїС‹Р»СЊ, РЈР¤-Р»СѓС‡Рё вЂ” РґР°Р¶Рµ Р°РєРєСѓСЂР°С‚РЅС‹Р№ РІРѕРґРёС‚РµР»СЊ РЅРµ РјРѕР¶РµС‚ СЌС‚Рѕ РѕСЃС‚Р°РЅРѕРІРёС‚СЊ.</p>
+        </div>
+        <div class="problems__grid">
+            <div class="problem-card" data-animate="fade-up" data-delay="0">
+                <div class="problem-card__icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4L28 16L40 12L32 22L44 28L32 28L36 40L24 32L12 40L16 28L4 28L16 22L8 12L20 16L24 4Z" stroke="#C8A97E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 14L18 20" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M30 18L34 24" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M20 30L26 34" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3 class="problem-card__title">Р¦Р°СЂР°РїРёРЅС‹ Рё СЃРєРѕР»С‹</h3>
+                <p class="problem-card__text">РљР°РјРЅРё, РІРµС‚РєРё, РїРµСЃРєРѕСЃС‚СЂСѓР№ вЂ” Р›РљРџ РїРѕРєСЂС‹РІР°РµС‚СЃСЏ РјРёРєСЂРѕС†Р°СЂР°РїРёРЅР°РјРё. Р§РµСЂРµР· 2вЂ“3 РіРѕРґР° Р°РІС‚РѕРјРѕР±РёР»СЊ РІС‹РіР»СЏРґРёС‚ В«СѓСЃС‚Р°РІС€РёРјВ».</p>
+            </div>
+            <div class="problem-card" data-animate="fade-up" data-delay="100">
+                <div class="problem-card__icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="12" width="32" height="24" rx="4" stroke="#C8A97E" stroke-width="2"/>
+                        <path d="M8 20H40" stroke="#C8A97E" stroke-width="1.5"/>
+                        <path d="M16 12V8" stroke="#C8A97E" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M32 12V8" stroke="#C8A97E" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M18 28C18 28 20 32 24 32C28 32 30 28 30 28" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round"/>
+                        <circle cx="18" cy="24" r="2" stroke="#C8A97E" stroke-width="1.5"/>
+                        <circle cx="30" cy="24" r="2" stroke="#C8A97E" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <h3 class="problem-card__title">Р“СЂСЏР·СЊ Рё Р·Р°РїР°С…Рё РІ СЃР°Р»РѕРЅРµ</h3>
+                <p class="problem-card__text">РўРєР°РЅСЊ РІРїРёС‚С‹РІР°РµС‚ РіСЂСЏР·СЊ, РєРѕР¶Р° С‚СЂРµСЃРєР°РµС‚СЃСЏ, РїР»Р°СЃС‚РёРє С‚СѓСЃРєРЅРµРµС‚. Р”Р°Р¶Рµ РµР¶РµРґРЅРµРІРЅР°СЏ РјРѕР№РєР° РЅРµ СЃРїР°СЃР°РµС‚.</p>
+            </div>
+            <div class="problem-card" data-animate="fade-up" data-delay="200">
+                <div class="problem-card__icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="18" stroke="#C8A97E" stroke-width="2"/>
+                        <path d="M24 16V18" stroke="#C8A97E" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M24 22V34" stroke="#C8A97E" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M18 38L14 42" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M30 38L34 42" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M20 10L24 6L28 10" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="problem-card__title">РќРµ Р·РЅР°СЋ, РєРѕРјСѓ РґРѕРІРµСЂРёС‚СЊ</h3>
+                <p class="problem-card__text">РћРґРЅРё РѕР±РµС‰Р°СЋС‚ В«РёРґРµР°Р»В» Р·Р° РєРѕРїРµР№РєРё, РґСЂСѓРіРёРµ вЂ” Р·Р° Р±Р°СЃРЅРѕСЃР»РѕРІРЅС‹Рµ РґРµРЅСЊРіРё. Рђ СЂРµР·СѓР»СЊС‚Р°С‚ РѕРґРёРЅ вЂ” СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёРµ.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="section section--darker" id="solution">
+    <div class="container">
+        <div class="section__header" data-animate="fade-up">
+            <h2 class="section__title">РњС‹ РІРѕСЃСЃС‚Р°РЅР°РІР»РёРІР°РµРј Рё Р·Р°С‰РёС‰Р°РµРј <span class="text-accent">РІР°С€ Р°РІС‚РѕРјРѕР±РёР»СЊ</span></h2>
+            <p class="section__subtitle">РќРµ РїСЂРѕСЃС‚Рѕ РјРѕРµРј вЂ” РІРѕР·РІСЂР°С‰Р°РµРј Р·Р°РІРѕРґСЃРєРѕР№ РІРёРґ Рё РїСЂРѕРґР»РµРІР°РµРј Р¶РёР·РЅСЊ Р›РљРџ РЅР° РіРѕРґС‹.</p>
+        </div>
+        <div class="solution__content">
+            <div class="solution__text" data-animate="fade-right">
+                <p class="solution__paragraph">Р”РµС‚РµР№Р»РёРЅРі вЂ” СЌС‚Рѕ РЅРµ СЂРѕСЃРєРѕС€СЊ, Р° РёРЅРІРµСЃС‚РёС†РёСЏ. РџРѕРєСЂС‹С‚РёРµ РєРµСЂР°РјРёРєРѕР№ Р·Р° 15 000 в‚Ѕ СЃРїР°СЃР°РµС‚ РєСѓР·РѕРІ РѕС‚ СЂРµР°РіРµРЅС‚РѕРІ Рё РЈР¤ РЅР° 2вЂ“3 РіРѕРґР°. Рђ РїРѕРєСЂР°СЃРєР° РѕРґРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° СЃС‚РѕРёС‚ РѕС‚ 20 000 в‚Ѕ.</p>
+                <p class="solution__paragraph">РњС‹ СЂР°Р±РѕС‚Р°РµРј С‚Р°Рє, С‡С‚РѕР±С‹ РІС‹ Р·Р°Р±С‹Р»Рё Рѕ РїСЂРѕР±Р»РµРјР°С… СЃ Р»Р°РєРѕРєСЂР°СЃРѕС‡РЅС‹Рј РїРѕРєСЂС‹С‚РёРµРј.</p>
+                <div class="solution__benefits">
+                    <div class="benefit">
+                        <div class="benefit__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L3 7V12C3 17.25 6.75 21.5 12 22.75C17.25 21.5 21 17.25 21 12V7L12 2Z"/>
+                                <path d="M9 12L11 14L15 10"/>
+                            </svg>
+                        </div>
+                        <div class="benefit__content">
+                            <h4 class="benefit__title">Р“Р°СЂР°РЅС‚РёСЏ РґРѕ 2 Р»РµС‚</h4>
+                            <p class="benefit__text">Р•СЃР»Рё РїРѕРєСЂС‹С‚РёРµ РѕС‚СЃР»РѕРёС‚СЃСЏ вЂ” РјС‹ РїРµСЂРµРґРµР»Р°РµРј Р·Р° СЃРІРѕР№ СЃС‡С‘С‚. Р‘РµР· РІРѕРїСЂРѕСЃРѕРІ.</p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 12L11 14L15 10"/>
+                                <path d="M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z"/>
+                            </svg>
+                        </div>
+                        <div class="benefit__content">
+                            <h4 class="benefit__title">РўРѕР»СЊРєРѕ СЃРµСЂС‚РёС„РёС†РёСЂРѕРІР°РЅРЅС‹Рµ РјР°С‚РµСЂРёР°Р»С‹</h4>
+                            <p class="benefit__text">Koch Chemie, Gyeon, Sonax вЂ” РїСЂРѕРІРµСЂРµРЅРЅС‹Рµ Р±СЂРµРЅРґС‹ СЃ РјРёСЂРѕРІС‹Рј РёРјРµРЅРµРј.</p>
+                        </div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <path d="M21 15L16 10L5 21"/>
+                            </svg>
+                        </div>
+                        <div class="benefit__content">
+                            <h4 class="benefit__title">Р¤РѕС‚РѕРѕС‚С‡С‘С‚ РЅР° РєР°Р¶РґРѕРј СЌС‚Р°РїРµ</h4>
+                            <p class="benefit__text">Р’С‹ РІРёРґРёС‚Рµ, С‡С‚Рѕ РґРµР»Р°РµРј СЃ РІР°С€РёРј Р°РІС‚Рѕ. РџРѕР»РЅР°СЏ РїСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="solution__visual" data-animate="fade-left">
+                <div class="solution__image">
+                    <div class="solution__image-placeholder">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <path d="M21 15L16 10L5 21"/>
+                        </svg>
+                        <span>Р¤РѕС‚Рѕ СЂРµР·СѓР»СЊС‚Р°С‚Р° РґРµС‚РµР№Р»РёРЅРіР°</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section__cta" data-animate="fade-up">
+            <a href="#cta" class="btn">Р Р°СЃСЃС‡РёС‚Р°С‚СЊ СЃС‚РѕРёРјРѕСЃС‚СЊ РјРѕРµРіРѕ Р°РІС‚Рѕ</a>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section--dark" id="services">
+    <div class="container">
+        <div class="section__header" data-animate="fade-up">
+            <h2 class="section__title">РќР°С€Рё СѓСЃР»СѓРіРё Рё <span class="text-accent">РїСЂРѕР·СЂР°С‡РЅС‹Рµ С†РµРЅС‹</span></h2>
+            <p class="section__subtitle">Р’С‹Р±РµСЂРёС‚Рµ СѓСЃР»СѓРіСѓ вЂ” С‚РѕС‡РЅС‹Р№ СЂР°СЃС‡С‘С‚ РїСЂРёС€Р»С‘Рј Р·Р° 10 РјРёРЅСѓС‚ РїРѕСЃР»Рµ РІР°С€РёС… С„РѕС‚Рѕ.</p>
+        </div>
+        <div class="services__tabs" data-animate="fade-up">
+            <button class="services__tab active" data-tab="body">РљСѓР·РѕРІ</button>
+            <button class="services__tab" data-tab="salon">РЎР°Р»РѕРЅ</button>
+            <button class="services__tab" data-tab="complex">РљРѕРјРїР»РµРєСЃ</button>
+        </div>
+        <div class="services__content">
+            <!-- РљСѓР·РѕРІ -->
+            <div class="services__panel active" id="panel-body">
+                <div class="services__grid">
+                    <div class="service-card">
+                        <div class="service-card__header">
+                            <h3 class="service-card__title">РџРѕР»РёСЂРѕРІРєР° РєСѓР·РѕРІР°</h3>
+                            <div class="service-card__meta">
+                                <span class="service-card__price">РѕС‚ 8 000 &#8381;</span>
+                                <span class="service-card__time">3вЂ“5 С‡Р°СЃРѕРІ</span>
+                            </div>
+                        </div>
+                        <p class="service-card__desc">Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ Р±Р»РµСЃРєР° Рё Р·Р°С‰РёС‚Р° Р›РљРџ</p>
+                        <a href="#cta" class="btn btn--outline btn--sm">Р Р°СЃСЃС‡РёС‚Р°С‚СЊ</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__header">
+                            <h3 class="service-card__title">РљРµСЂР°РјРёС‡РµСЃРєРѕРµ РїРѕРєСЂС‹С‚РёРµ</h3>
+                            <div class="service-card__meta">
+                                <span class="service-card__price">РѕС‚ 18 000 &#8381;</span>
+                                <span class="service-card__time">1 РґРµРЅСЊ</span>
+                            </div>
+                        </div>
+                        <p class="service-card__desc">Р”РѕР»РіРѕРІСЂРµРјРµРЅРЅР°СЏ Р·Р°С‰РёС‚Р° РєСѓР·РѕРІР°</p>
+                        <a href="#cta" class="btn btn--outline btn--sm">Р Р°СЃСЃС‡РёС‚Р°С‚СЊ</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__header">
+                            <h3 class="service-card__title">РћРєР»РµР№РєР° PPF (Р·РѕРЅС‹ СЂРёСЃРєР°)</h3>
+                            <div class="service-card__meta">
+                                <span class="service-card__price">РѕС‚ 25 000 &#8381;</span>
+                                <span class="service-card__time">1вЂ“2 РґРЅСЏ</span>
+                            </div>
+                        </div>
+                        <p class="service-card__desc">Р—Р°С‰РёС‚Р° РѕС‚ СЃРєРѕР»РѕРІ Рё С†Р°СЂР°РїРёРЅ</p>
+                        <a href="#cta" class="btn btn--outline btn--sm">Р Р°СЃСЃС‡РёС‚Р°С‚СЊ</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__header">
+                            <h3 class="service-card__title">РћРєР»РµР№РєР° PPF (РїРѕР»РЅР°СЏ)</h3>
+                            <div class="service-card__meta">
+                                <span class="service-card__price">РѕС‚ 80 000 &#8381;</span>
+                                <span class="service-card__time">3вЂ“5 РґРЅРµР№</span>
+                            </div>
+                        </div>
+                        <p class="service-card__desc">РџРѕР»РЅР°СЏ Р·Р°С‰РёС‚Р° РІСЃРµРіРѕ РєСѓР·РѕРІР°</p>
+                        <a href="#cta" class="btn btn--outline btn--sm">Р Р°СЃСЃС‡РёС‚Р°С‚СЊ</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__header">
+                            <h3 class="service-card__title">РђРЅС‚РёРіСЂР°РІРёР№РЅР°СЏ РїР»С‘РЅРєР°</h3>
+                            <div class="service-card__meta">
+                                <span class="service-card__price">РѕС‚ 15 000 &#8381;</span>
+                                <span class="service-card__time">1 РґРµРЅСЊ</span>
+                            </div>
+                        </div>
+                        <p class="service-card__desc">Р—Р°С‰РёС‚Р° РѕС‚ РєР°РјРЅРµР№ Рё СЂРµР°РіРµРЅС‚РѕРІ</p>
+                        <a href="#cta" class="btn btn--outline btn--sm">Р Р°СЃСЃС‡РёС‚Р°С‚СЊ</a>
+                    </div>
+                </div>
+            </div>
+            <!-- РЎР°Р»РѕРЅ -->
+            <div class="services__panel" id="panel-salon">
+                <div class="services__grid">
+                    <div class="service-card">
+                        <div class="service-card__header">
+                            <h3 class="service-card__title">РҐРёРјС‡РёСЃС‚РєР° СЃР°Р»РѕРЅР°</h3>
+                            <div class="service-card__meta">
+                                <span class="service-card__price">РѕС‚ 7 000 &#8381;</span>
+                                <span class="service-card__time">4вЂ“8 С‡Р°СЃРѕРІ</span>
+                            </div>
+                        </div>
+                        <p class="service-card__desc">Р“Р»СѓР±РѕРєР°СЏ С‡РёСЃС‚РєР° РІСЃРµС… РїРѕРІРµСЂС…РЅРѕСЃС‚РµР№</p>
+                        <a href="#cta" class="btn btn--outline btn--sm">Р Р°СЃСЃС‡РёС‚Р°С‚СЊ</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__header">
+                            <h3 class="service-card__title">РҐРёРјС‡РёСЃС‚РєР° РєРѕР¶Р°РЅРѕРіРѕ СЃР°Р»РѕРЅР°</h3>
+                            <div class="service-card__meta">
+                                <span class="service-card__price">РѕС‚ 12 000 &#8381;</span>
+                                <span class="service-card__time">5вЂ“8 С‡Р°СЃРѕРІ</span>
+                            </div>
+                        </div>
+                        <p class="service-card__desc">Р”РµР»РёРєР°С‚РЅР°СЏ С‡РёСЃС‚РєР° Рё Р·Р°С‰РёС‚Р° РєРѕР¶Рё</p>
+                        <a href="#cta" class="btn btn--outline btn--sm">Р Р°СЃСЃС‡РёС‚Р°С‚СЊ</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__header">
+                            <h3 class="service-card__title">Р РµСЃС‚Р°РІСЂР°С†РёСЏ РєРѕР¶Рё</h3>
+                            <div class="service-card__meta">
+                                <span class="service-card__price">РѕС‚ 15 000 &#8381;</span>
+                                <span class="service-card__time">6вЂ“10 С‡Р°СЃРѕРІ</span>
+                            </div>
+                        </div>
+                        <p class="service-card__desc">Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ С†РІРµС‚Р° Рё С‚РµРєСЃС‚СѓСЂС‹</p>
+                        <a href="#cta" class="btn btn--outline btn--sm">Р Р°СЃСЃС‡РёС‚Р°С‚СЊ</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__header">
+                            <h3 class="service-card__title">РћР·РѕРЅР°С†РёСЏ + РІР»Р°Р¶РЅР°СЏ СѓР±РѕСЂРєР°</h3>
+                            <div class="service-card__meta">
+                                <span class="service-card__price">РѕС‚ 5 000 &#8381;</span>
+                                <span class="service-card__time">3вЂ“4 С‡Р°СЃР°</span>
+                            </div>
+                        </div>
+                        <p class="service-card__desc">РЈСЃС‚СЂР°РЅРµРЅРёРµ Р·Р°РїР°С…РѕРІ Рё Р±Р°РєС‚РµСЂРёР№</p>
+                        <a href="#cta" class="btn btn--outline btn--sm">Р Р°СЃСЃС‡РёС‚Р°С‚СЊ</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__header">
+                            <h3 class="service-card__title">РџРµСЂРµС‚СЏР¶РєР° СЂСѓР»СЏ</h3>
+                            <div class="service-card__meta">
+                                <span class="service-card__price">РѕС‚ 8 000 &#8381;</span>
+                                <span class="service-card__time">4вЂ“6 С‡Р°СЃРѕРІ</span>
+                            </div>
+                        </div>
+                        <p class="service-card__desc">РђР»СЊРєР°РЅС‚Р°СЂР°, РєРѕР¶Р°, РєРѕРјР±Рѕ</p>
+                        <a href="#cta" class="btn btn--outline btn--sm">Р Р°СЃСЃС‡РёС‚Р°С‚СЊ</a>
+                    </div>
+                </div>
+            </div>
+            <!-- РљРѕРјРїР»РµРєСЃ -->
+            <div class="services__panel" id="panel-complex">
+                <div class="services__grid">
+                    <div class="service-card service-card--featured">
+                        <div class="service-card__badge">РџРѕРїСѓР»СЏСЂРЅРѕРµ</div>
+                        <div class="service-card__header">
+                            <h3 class="service-card__title">РџРѕР»РЅС‹Р№ РґРµС‚РµР№Р»РёРЅРі</h3>
+                            <div class="service-card__meta">
+                                <span class="service-card__price">РѕС‚ 35 000 &#8381;</span>
+                                <span class="service-card__time">1вЂ“2 РґРЅСЏ</span>
+                            </div>
+                        </div>
+                        <p class="service-card__desc">РљРѕРјРїР»РµРєСЃРЅС‹Р№ СѓС…РѕРґ Р·Р° РєСѓР·РѕРІРѕРј Рё СЃР°Р»РѕРЅРѕРј</p>
+                        <a href="#cta" class="btn btn--sm">Р Р°СЃСЃС‡РёС‚Р°С‚СЊ</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__header">
+                            <h3 class="service-card__title">РџСЂРµРґРїСЂРѕРґР°Р¶РЅР°СЏ РїРѕРґРіРѕС‚РѕРІРєР°</h3>
+                            <div class="service-card__meta">
+                                <span class="service-card__price">РѕС‚ 20 000 &#8381;</span>
+                                <span class="service-card__time">1 РґРµРЅСЊ</span>
+                            </div>
+                        </div>
+                        <p class="service-card__desc">РњР°РєСЃРёРјР°Р»СЊРЅС‹Р№ РІРёРґ РґР»СЏ РїСЂРѕРґР°Р¶Рё</p>
+                        <a href="#cta" class="btn btn--outline btn--sm">Р Р°СЃСЃС‡РёС‚Р°С‚СЊ</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card__header">
+                            <h3 class="service-card__title">Р”РµС‚РµР№Р»РёРЅРі-РїР°РєРµС‚ В«Р—Р°С‰РёС‚Р° РіРѕРґР°В»</h3>
+                            <div class="service-card__meta">
+                                <span class="service-card__price">РѕС‚ 25 000 &#8381;</span>
+                                <span class="service-card__time">1 РґРµРЅСЊ</span>
+                            </div>
+                        </div>
+                        <p class="service-card__desc">РџРѕР»РёСЂРѕРІРєР° + РєРµСЂР°РјРёРєР° + С…РёРјС‡РёСЃС‚РєР°</p>
+                        <a href="#cta" class="btn btn--outline btn--sm">Р Р°СЃСЃС‡РёС‚Р°С‚СЊ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="services__note" data-animate="fade-up">* Р¦РµРЅР° Р·Р°РІРёСЃРёС‚ РѕС‚ РјР°СЂРєРё, СЂР°Р·РјРµСЂР° Рё СЃРѕСЃС‚РѕСЏРЅРёСЏ Р°РІС‚РѕРјРѕР±РёР»СЏ. РўРѕС‡РЅСѓСЋ СЃС‚РѕРёРјРѕСЃС‚СЊ РїСЂРёС€Р»С‘Рј Р·Р° 10 РјРёРЅСѓС‚ РїРѕСЃР»Рµ РІР°С€РёС… С„РѕС‚Рѕ.</p>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section section--darker" id="portfolio">
+    <div class="container">
+        <div class="section__header" data-animate="fade-up">
+            <h2 class="section__title">РќР°С€Рё СЂР°Р±РѕС‚С‹ РіРѕРІРѕСЂСЏС‚ <span class="text-accent">СЃР°РјРё Р·Р° СЃРµР±СЏ</span></h2>
+            <p class="section__subtitle">РљР°Р¶РґС‹Р№ РїСЂРѕРµРєС‚ вЂ” СЌС‚Рѕ РёСЃС‚РѕСЂРёСЏ РїСЂРµРѕР±СЂР°Р¶РµРЅРёСЏ. РЎРјРѕС‚СЂРёС‚Рµ СЃР°РјРё.</p>
+        </div>
+        <div class="portfolio__slider" data-animate="fade-up">
+            <div class="portfolio__track" id="portfolioTrack">
+                <div class="portfolio__slide">
+                    <div class="portfolio__card">
+                        <div class="portfolio__image">
+                            <div class="portfolio__image-placeholder">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                                    <path d="M21 15L16 10L5 21"/>
+                                </svg>
+                                <span>Р¤РѕС‚Рѕ: Mercedes-Benz GLE</span>
+                            </div>
+                        </div>
+                        <div class="portfolio__info">
+                            <h3 class="portfolio__car">Mercedes-Benz GLE 2022</h3>
+                            <p class="portfolio__services">РџРѕР»РёСЂРѕРІРєР° + РєРµСЂР°РјРёС‡РµСЃРєРѕРµ РїРѕРєСЂС‹С‚РёРµ + С…РёРјС‡РёСЃС‚РєР° СЃР°Р»РѕРЅР°</p>
+                            <p class="portfolio__result">Р’РѕСЃСЃС‚Р°РЅРѕРІР»РµРЅ РіР»СѓР±РёРЅР° С†РІРµС‚Р°, Р›РљРџ Р·Р°С‰РёС‰РµРЅРѕ РЅР° 2 РіРѕРґР°</p>
+                            <span class="portfolio__time">РЎСЂРѕРє: 1 РґРµРЅСЊ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__slide">
+                    <div class="portfolio__card">
+                        <div class="portfolio__image">
+                            <div class="portfolio__image-placeholder">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                                    <path d="M21 15L16 10L5 21"/>
+                                </svg>
+                                <span>Р¤РѕС‚Рѕ: BMW X5</span>
+                            </div>
+                        </div>
+                        <div class="portfolio__info">
+                            <h3 class="portfolio__car">BMW X5 2020</h3>
+                            <p class="portfolio__services">РџРѕР»РЅР°СЏ С…РёРјС‡РёСЃС‚РєР° СЃР°Р»РѕРЅР° + СЂРµСЃС‚Р°РІСЂР°С†РёСЏ РєРѕР¶Р°РЅС‹С… СЃРёРґРµРЅРёР№</p>
+                            <p class="portfolio__result">РљРѕР¶Р° РєР°Рє РЅРѕРІР°СЏ, Р·Р°РїР°С…Рё СѓСЃС‚СЂР°РЅРµРЅС‹</p>
+                            <span class="portfolio__time">РЎСЂРѕРє: 1 РґРµРЅСЊ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__slide">
+                    <div class="portfolio__card">
+                        <div class="portfolio__image">
+                            <div class="portfolio__image-placeholder">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                                    <path d="M21 15L16 10L5 21"/>
+                                </svg>
+                                <span>Р¤РѕС‚Рѕ: Porsche Cayenne</span>
+                            </div>
+                        </div>
+                        <div class="portfolio__info">
+                            <h3 class="portfolio__car">Porsche Cayenne 2023</h3>
+                            <p class="portfolio__services">РџРѕР»РЅР°СЏ РѕРєР»РµР№РєР° PPF + РєРµСЂР°РјРёРєР° РЅР° РїР»С‘РЅРєСѓ</p>
+                            <p class="portfolio__result">РџРѕР»РЅР°СЏ Р·Р°С‰РёС‚Р° РєСѓР·РѕРІР° РѕС‚ СЃРєРѕР»РѕРІ Рё С†Р°СЂР°РїРёРЅ</p>
+                            <span class="portfolio__time">РЎСЂРѕРє: 3 РґРЅСЏ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__slide">
+                    <div class="portfolio__card">
+                        <div class="portfolio__image">
+                            <div class="portfolio__image-placeholder">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                                    <path d="M21 15L16 10L5 21"/>
+                                </svg>
+                                <span>Р¤РѕС‚Рѕ: Toyota Land Cruiser</span>
+                            </div>
+                        </div>
+                        <div class="portfolio__info">
+                            <h3 class="portfolio__car">Toyota Land Cruiser 2021</h3>
+                            <p class="portfolio__services">РҐРёРјС‡РёСЃС‚РєР° СЃР°Р»РѕРЅР° + РґРµС‚РµР№Р»РёРЅРі Р°СЂРѕРє + РєРµСЂР°РјРёРєР° РґРёСЃРєРѕРІ</p>
+                            <p class="portfolio__result">РђРІС‚РѕРјРѕР±РёР»СЊ РіРѕС‚РѕРІ Рє СЃРµР·РѕРЅСѓ вЂ” С‡РёСЃС‚С‹Р№, Р·Р°С‰РёС‰С‘РЅРЅС‹Р№</p>
+                            <span class="portfolio__time">РЎСЂРѕРє: 1 РґРµРЅСЊ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__slide">
+                    <div class="portfolio__card">
+                        <div class="portfolio__image">
+                            <div class="portfolio__image-placeholder">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                                    <path d="M21 15L16 10L5 21"/>
+                                </svg>
+                                <span>Р¤РѕС‚Рѕ: Audi Q7</span>
+                            </div>
+                        </div>
+                        <div class="portfolio__info">
+                            <h3 class="portfolio__car">Audi Q7 2022</h3>
+                            <p class="portfolio__services">РџРѕР»РёСЂРѕРІРєР° С„Р°СЂ + С…РёРјС‡РёСЃС‚РєР° СЃР°Р»РѕРЅР° + Р°РЅС‚РёРґРѕР¶РґСЊ РЅР° СЃС‚С‘РєР»Р°</p>
+                            <p class="portfolio__result">Р¤Р°СЂС‹ РїСЂРѕР·СЂР°С‡РЅС‹Рµ, СЃС‚РµРєР»Р° Р·Р°С‰РёС‰РµРЅС‹ РѕС‚ РґРѕР¶РґСЏ</p>
+                            <span class="portfolio__time">РЎСЂРѕРє: 1 РґРµРЅСЊ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio__controls">
+                <button class="portfolio__btn portfolio__btn--prev" id="portfolioPrev" aria-label="РџСЂРµРґС‹РґСѓС‰Р°СЏ">&#8592;</button>
+                <div class="portfolio__dots" id="portfolioDots"></div>
+                <button class="portfolio__btn portfolio__btn--next" id="portfolioNext" aria-label="РЎР»РµРґСѓСЋС‰Р°СЏ">&#8594;</button>
+            </div>
+        </div>
+        <div class="section__cta" data-animate="fade-up">
+            <p class="portfolio__cta-text">РҐРѕС‚РёС‚Рµ С‚Р°Рє Р¶Рµ РґР»СЏ РІР°С€РµРіРѕ Р°РІС‚Рѕ?</p>
+            <a href="#cta" class="btn">Р Р°СЃСЃС‡РёС‚Р°С‚СЊ СЃС‚РѕРёРјРѕСЃС‚СЊ Р·Р° 10 РјРёРЅСѓС‚</a>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section section--dark" id="gallery">
+    <div class="container">
+        <div class="section__header" data-animate="fade-up">
+            <h2 class="section__title">Р“Р°Р»РµСЂРµСЏ <span class="text-accent">РЅР°С€РёС… СЂР°Р±РѕС‚</span></h2>
+            <p class="section__subtitle">Р РµР°Р»СЊРЅС‹Рµ С„РѕС‚Рѕ РґРѕ Рё РїРѕСЃР»Рµ вЂ” Р±РµР· С„РѕС‚РѕС€РѕРїР° Рё РѕР±СЂР°Р±РѕС‚РєРё.</p>
+        </div>
+        <div class="gallery__grid" data-animate="fade-up">
+            <div class="gallery__item">
+                <div class="gallery__placeholder">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15L16 10L5 21"/>
+                    </svg>
+                    <span>РџРѕР»РёСЂРѕРІРєР° BMW X5</span>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <div class="gallery__placeholder">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15L16 10L5 21"/>
+                    </svg>
+                    <span>РљРµСЂР°РјРёРєР° Mercedes</span>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <div class="gallery__placeholder">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15L16 10L5 21"/>
+                    </svg>
+                    <span>РҐРёРјС‡РёСЃС‚РєР° Audi</span>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <div class="gallery__placeholder">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15L16 10L5 21"/>
+                    </svg>
+                    <span>РћРєР»РµР№РєР° Porsche</span>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <div class="gallery__placeholder">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15L16 10L5 21"/>
+                    </svg>
+                    <span>Р РµСЃС‚Р°РІСЂР°С†РёСЏ Toyota</span>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <div class="gallery__placeholder">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15L16 10L5 21"/>
+                    </svg>
+                    <span>РџРѕР»РёСЂРѕРІРєР° С„Р°СЂ</span>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <div class="gallery__placeholder">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15L16 10L5 21"/>
+                    </svg>
+                    <span>РљРµСЂР°РјРёРєР° РґРёСЃРєРѕРІ</span>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <div class="gallery__placeholder">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15L16 10L5 21"/>
+                    </svg>
+                    <span>РђРЅС‚РёРґРѕР¶РґСЊ РЅР° СЃС‚С‘РєР»Р°</span>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <div class="gallery__placeholder">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15L16 10L5 21"/>
+                    </svg>
+                    <span>РҐРёРјС‡РёСЃС‚РєР° РєРѕР¶Р°РЅС‹С… СЃРёРґРµРЅРёР№</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section section--dark" id="process">
+    <div class="container">
+        <div class="section__header" data-animate="fade-up">
+            <h2 class="section__title">РљР°Рє РјС‹ СЂР°Р±РѕС‚Р°РµРј вЂ” <span class="text-accent">4 РїСЂРѕСЃС‚С‹С… С€Р°РіР°</span></h2>
+            <p class="section__subtitle">РџРѕР»РЅР°СЏ РїСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ: РІС‹ Р·РЅР°РµС‚Рµ РєР°Р¶РґС‹Р№ СЌС‚Р°Рї Рё РєРѕРЅС‚СЂРѕР»РёСЂСѓРµС‚Рµ РїСЂРѕС†РµСЃСЃ.</p>
+        </div>
+        <div class="process__grid">
+            <div class="process__step" data-animate="fade-up" data-delay="0">
+                <div class="process__number">01</div>
+                <div class="process__icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 19C23 20.1 22.1 21 21 21H3C1.9 21 1 20.1 1 19V8C1 6.9 1.9 6 3 6H7L9 3H15L17 6H21C22.1 6 23 6.9 23 8V19Z"/>
+                        <circle cx="12" cy="13" r="4"/>
+                    </svg>
+                </div>
+                <h3 class="process__title">РџСЂРёС€Р»РёС‚Рµ С„РѕС‚Рѕ</h3>
+                <p class="process__text">РЎС„РѕС‚РѕРіСЂР°С„РёСЂСѓР№С‚Рµ Р°РІС‚РѕРјРѕР±РёР»СЊ СЃ 4 СЃС‚РѕСЂРѕРЅ. РњС‹ РѕС†РµРЅРёРј СЃРѕСЃС‚РѕСЏРЅРёРµ Рё РїСЂРёС€Р»С‘Рј С‚РѕС‡РЅС‹Р№ СЂР°СЃС‡С‘С‚ Р·Р° 10 РјРёРЅСѓС‚.</p>
+            </div>
+            <div class="process__step" data-animate="fade-up" data-delay="100">
+                <div class="process__number">02</div>
+                <div class="process__icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2"/>
+                        <line x1="16" y1="2" x2="16" y2="6"/>
+                        <line x1="8" y1="2" x2="8" y2="6"/>
+                        <line x1="3" y1="10" x2="21" y2="10"/>
+                        <rect x="7" y="14" width="4" height="4" rx="1"/>
+                    </svg>
+                </div>
+                <h3 class="process__title">Р’С‹Р±РµСЂРёС‚Рµ РІСЂРµРјСЏ</h3>
+                <p class="process__text">Р—Р°РїРёС€РёС‚РµСЃСЊ РЅР° СѓРґРѕР±РЅРѕРµ РІСЂРµРјСЏ. РџСЂРёРµР·Р¶Р°Р№С‚Рµ Рє РЅР°Рј РёР»Рё РјС‹ РїСЂРёРµРґРµРј Рє РІР°Рј вЂ” РєР°Рє СѓРґРѕР±РЅРµРµ.</p>
+            </div>
+            <div class="process__step" data-animate="fade-up" data-delay="200">
+                <div class="process__number">03</div>
+                <div class="process__icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14.7 6.3C14.3 5.2 13.2 4.5 12 4.5C10.4 4.5 9.1 5.8 9.1 7.4V11.5"/>
+                        <path d="M12 15.5V19.5"/>
+                        <path d="M9.1 11.5H14.9"/>
+                        <circle cx="12" cy="15.5" r="2"/>
+                        <path d="M14.9 11.5L17.5 7.5C18.3 6.5 17.9 5.1 16.8 4.6L15.5 4"/>
+                        <path d="M12 4.5V2.5"/>
+                        <path d="M7 7.5L5 5.5"/>
+                    </svg>
+                </div>
+                <h3 class="process__title">РњС‹ СЂР°Р±РѕС‚Р°РµРј</h3>
+                <p class="process__text">Р¤РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ С†РµРЅР° вЂ” Р±РµР· РґРѕРїР»Р°С‚. Р¤РѕС‚РѕРѕС‚С‡С‘С‚ РЅР° РєР°Р¶РґРѕРј СЌС‚Р°РїРµ.</p>
+            </div>
+            <div class="process__step" data-animate="fade-up" data-delay="300">
+                <div class="process__number">04</div>
+                <div class="process__icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                    </svg>
+                </div>
+                <h3 class="process__title">РџРѕР»СѓС‡РёС‚Рµ СЂРµР·СѓР»СЊС‚Р°С‚</h3>
+                <p class="process__text">РџСЂРёРЅРёРјР°РµС‚Рµ СЂР°Р±РѕС‚Сѓ. РџРѕР»СѓС‡Р°РµС‚Рµ РіР°СЂР°РЅС‚РёСЋ РґРѕ 2 Р»РµС‚. Р’Р°С€ Р°РІС‚РѕРјРѕР±РёР»СЊ РІС‹РіР»СЏРґРёС‚ РєР°Рє РЅРѕРІС‹Р№.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section section--darker" id="about">
+    <div class="container">
+        <div class="section__header" data-animate="fade-up">
+            <h2 class="section__title">РџРѕС‡РµРјСѓ РЅР°Рј РґРѕРІРµСЂСЏСЋС‚ <span class="text-accent">2000+ РєР»РёРµРЅС‚РѕРІ</span></h2>
+            <p class="section__subtitle">РњС‹ РЅРµ РїСЂРѕСЃС‚Рѕ РјРѕРµРј вЂ” РјС‹ Р·Р°Р±РѕС‚РёРјСЃСЏ Рѕ РІР°С€РµРј Р°РІС‚РѕРјРѕР±РёР»Рµ.</p>
+        </div>
+        <div class="about__content">
+            <div class="about__image" data-animate="fade-right">
+                <div class="about__image-placeholder">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+                        <path d="M20 21V19C20 16.79 18.21 15 16 15H8C5.79 15 4 16.79 4 19V21"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <span>Р¤РѕС‚Рѕ РјР°СЃС‚РµСЂР°</span>
+                </div>
+            </div>
+            <div class="about__info" data-animate="fade-left">
+                <div class="about__master">
+                    <h3 class="about__name">РњР°СЃС‚РµСЂ [РРјСЏ]</h3>
+                    <p class="about__experience">7+ Р»РµС‚ РѕРїС‹С‚Р° РІ РґРµС‚РµР№Р»РёРЅРіРµ</p>
+                    <p class="about__cert">РЎРµСЂС‚РёС„РёС†РёСЂРѕРІР°РЅРЅС‹Р№ СЃРїРµС†РёР°Р»РёСЃС‚ Koch Chemie</p>
+                </div>
+                <div class="about__benefits">
+                    <div class="about__benefit">
+                        <span class="about__benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9H4.5C3.67 9 3 9.67 3 10.5V13.5C3 14.33 3.67 15 4.5 15H6"/>
+                                <path d="M18 9H19.5C20.33 9 21 9.67 21 10.5V13.5C21 14.33 20.33 15 19.5 15H18"/>
+                                <path d="M6 15V18C6 19.1 6.9 20 8 20H16C17.1 20 18 19.1 18 18V15"/>
+                                <path d="M12 4V8"/>
+                                <path d="M8 8H16"/>
+                                <path d="M12 2L8 6"/>
+                                <path d="M12 2L16 6"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h4>7 Р»РµС‚ РѕРїС‹С‚Р°</h4>
+                            <p>РЎ 2017 РіРѕРґР° СЂР°Р±РѕС‚Р°СЋ СЃ Р°РІС‚РѕРјРѕР±РёР»СЏРјРё РІСЃРµС… РјР°СЂРѕРє. Р—РЅР°СЋ, РєР°Рє РІРµСЂРЅСѓС‚СЊ РґР°Р¶Рµ СЃР°РјРѕРјСѓ В«СѓСЃС‚Р°РІС€РµРјСѓВ» Р°РІС‚Рѕ Р·Р°РІРѕРґСЃРєРѕР№ РІРёРґ.</p>
+                        </div>
+                    </div>
+                    <div class="about__benefit">
+                        <span class="about__benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22Z"/>
+                                <path d="M8 12L11 15L16 9"/>
+                                <path d="M12 2V5"/>
+                                <path d="M12 19V22"/>
+                                <path d="M2 12H5"/>
+                                <path d="M19 12H22"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h4>РўРѕР»СЊРєРѕ СЃРµСЂС‚РёС„РёС†РёСЂРѕРІР°РЅРЅС‹Рµ РјР°С‚РµСЂРёР°Р»С‹</h4>
+                            <p>Koch Chemie, Gyeon, Sonax вЂ” РїСЂРѕРІРµСЂРµРЅРЅС‹Рµ Р±СЂРµРЅРґС‹. РќРёРєР°РєРёС… РїРѕРґРґРµР»РѕРє Рё РґРµС€С‘РІРѕР№ С…РёРјРёРё.</p>
+                        </div>
+                    </div>
+                    <div class="about__benefit">
+                        <span class="about__benefit-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L3 7V12C3 17.25 6.75 21.5 12 22.75C17.25 21.5 21 17.25 21 12V7L12 2Z"/>
+                                <path d="M9 12L11 14L15 10"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <h4>Р“Р°СЂР°РЅС‚РёСЏ РґРѕ 2 Р»РµС‚</h4>
+                            <p>Р•СЃР»Рё РїРѕРєСЂС‹С‚РёРµ РѕС‚СЃР»РѕРёС‚СЃСЏ вЂ” РїРµСЂРµРґРµР»Р°РµРј Р·Р° СЃРІРѕР№ СЃС‡С‘С‚. Р‘РµР· РІРѕРїСЂРѕСЃРѕРІ Рё РґРѕРїР»Р°С‚.</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="about__personal">РЇ СЂР°Р±РѕС‚Р°СЋ РѕРґРёРЅ вЂ” Р±РµР· РїРѕСЃСЂРµРґРЅРёРєРѕРІ Рё В«РіР°СЂР°Р¶РЅС‹С…В» РјР°СЃС‚РµСЂРѕРІ. Р’С‹ РѕР±С‰Р°РµС‚РµСЃСЊ РЅР°РїСЂСЏРјСѓСЋ СЃРѕ РјРЅРѕР№. Р—РЅР°РµС‚Рµ, РєС‚Рѕ РґРµР»Р°РµС‚ РІР°С€Сѓ РјР°С€РёРЅСѓ Рё РјРѕР¶РµС‚Рµ Р·Р°РґР°С‚СЊ Р»СЋР±РѕР№ РІРѕРїСЂРѕСЃ.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section section--dark" id="reviews">
+    <div class="container">
+        <div class="section__header" data-animate="fade-up">
+            <h2 class="section__title">Р§С‚Рѕ РіРѕРІРѕСЂСЏС‚ <span class="text-accent">РЅР°С€Рё РєР»РёРµРЅС‚С‹</span></h2>
+            <p class="section__subtitle">Р РµР°Р»СЊРЅС‹Рµ РѕС‚Р·С‹РІС‹ СЂРµР°Р»СЊРЅС‹С… Р»СЋРґРµР№. РљР°Р¶РґС‹Р№ РјРѕР¶РЅРѕ РїСЂРѕРІРµСЂРёС‚СЊ.</p>
+        </div>
+        <div class="reviews__slider" data-animate="fade-up">
+            <div class="reviews__track" id="reviewsTrack">
+                <div class="reviews__slide">
+                    <div class="review-card">
+                        <div class="review-card__quote">&laquo;</div>
+                        <p class="review-card__text">РњР°С€РёРЅРµ 5 Р»РµС‚, Р° РїРѕСЃР»Рµ РґРµС‚РµР№Р»РёРЅРіР° РІС‹РіР»СЏРґРёС‚ РєР°Рє РЅРѕРІР°СЏ. Р“Р»СѓР±РёРЅР° С†РІРµС‚Р° вЂ” РЅР° Р·Р°РІРёСЃС‚СЊ СЃРѕСЃРµРґСЏРј. Р РµРєРѕРјРµРЅРґСѓСЋ!</p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">РЎРљ</div>
+                            <div class="review-card__info">
+                                <span class="review-card__name">РЎРµСЂРіРµР№ Рљ.</span>
+                                <span class="review-card__car">BMW X5 2020</span>
+                            </div>
+                        </div>
+                        <a href="#" class="review-card__link">РЇРЅРґРµРєСЃ.РљР°СЂС‚С‹ &#8594;</a>
+                    </div>
+                </div>
+                <div class="reviews__slide">
+                    <div class="review-card">
+                        <div class="review-card__quote">&laquo;</div>
+                        <p class="review-card__text">РЈР±СЂР°Р»Рё РІСЃРµ Р·Р°РїР°С…Рё, РєРѕР¶Р° РєР°Рє РЅР° Р·Р°РІРѕРґРµ. Р РµР±СЏС‚Р° вЂ” РјРѕР»РѕРґС†С‹, СЃРґРµР»Р°Р»Рё Р·Р° 1 РґРµРЅСЊ. РЎРїР°СЃРёР±Рѕ!</p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">РђРњ</div>
+                            <div class="review-card__info">
+                                <span class="review-card__name">РђРЅРЅР° Рњ.</span>
+                                <span class="review-card__car">Mercedes E-Class 2021</span>
+                            </div>
+                        </div>
+                        <a href="#" class="review-card__link">2Р“РРЎ &#8594;</a>
+                    </div>
+                </div>
+                <div class="reviews__slide">
+                    <div class="review-card">
+                        <div class="review-card__quote">&laquo;</div>
+                        <p class="review-card__text">РћРєР»РµРёР» РІРµСЃСЊ РєСѓР·РѕРІ. Р§РµСЂРµР· РїРѕР»РіРѕРґР° вЂ” РЅРё РѕРґРЅРѕРіРѕ СЃРєРѕР»Р°. РџР»С‘РЅРєР° СЃРµР±СЏ РѕРїСЂР°РІРґР°Р»Р°. Р‘СѓРґСѓ РѕР±СЂР°С‰Р°С‚СЊСЃСЏ СЃРЅРѕРІР°.</p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">Р”Рџ</div>
+                            <div class="review-card__info">
+                                <span class="review-card__name">Р”РјРёС‚СЂРёР№ Рџ.</span>
+                                <span class="review-card__car">Toyota Land Cruiser 2022</span>
+                            </div>
+                        </div>
+                        <a href="#" class="review-card__link">РЇРЅРґРµРєСЃ.РљР°СЂС‚С‹ &#8594;</a>
+                    </div>
+                </div>
+                <div class="reviews__slide">
+                    <div class="review-card">
+                        <div class="review-card__quote">&laquo;</div>
+                        <p class="review-card__text">РџСЂРёРіРЅР°Р»Р° РјР°С€РёРЅСѓ РїРѕСЃР»Рµ Р·РёРјС‹ вЂ” Р›РљРџ Р±С‹Р» РІ РјРµР»РєРёС… С†Р°СЂР°РїРёРЅР°С…. РџРѕСЃР»Рµ РїРѕР»РёСЂРѕРІРєРё вЂ” РёРґРµР°Р». РњР°СЃС‚РµСЂ Р·РЅР°РµС‚ СЃРІРѕС‘ РґРµР»Рѕ.</p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">Р•Р’</div>
+                            <div class="review-card__info">
+                                <span class="review-card__name">Р•Р»РµРЅР° Р’.</span>
+                                <span class="review-card__car">Porsche Cayenne 2023</span>
+                            </div>
+                        </div>
+                        <a href="#" class="review-card__link">РЇРЅРґРµРєСЃ.РљР°СЂС‚С‹ &#8594;</a>
+                    </div>
+                </div>
+                <div class="reviews__slide">
+                    <div class="review-card">
+                        <div class="review-card__quote">&laquo;</div>
+                        <p class="review-card__text">Р”РµС‚Рё СЂР°Р·Р»РёР»Рё СЃРѕРє РЅР° СЃРёРґРµРЅСЊСЏ вЂ” РґСѓРјР°Р», РІСЃС‘, РєРѕРЅРµС†. РџРѕСЃР»Рµ С…РёРјС‡РёСЃС‚РєРё вЂ” РєР°Рє РЅРѕРІС‹Р№. РџР°СЂРЅРё, РІС‹ РІРѕР»С€РµР±РЅРёРєРё!</p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">РђР </div>
+                            <div class="review-card__info">
+                                <span class="review-card__name">РђР»РµРєСЃРµР№ Р .</span>
+                                <span class="review-card__car">Audi Q7 2021</span>
+                            </div>
+                        </div>
+                        <a href="#" class="review-card__link">2Р“РРЎ &#8594;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews__controls">
+                <button class="reviews__btn reviews__btn--prev" id="reviewsPrev" aria-label="РџСЂРµРґС‹РґСѓС‰Р°СЏ">&#8592;</button>
+                <div class="reviews__dots" id="reviewsDots"></div>
+                <button class="reviews__btn reviews__btn--next" id="reviewsNext" aria-label="РЎР»РµРґСѓСЋС‰Р°СЏ">&#8594;</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section--darker" id="faq">
+    <div class="container">
+        <div class="section__header" data-animate="fade-up">
+            <h2 class="section__title">Р§Р°СЃС‚С‹Рµ <span class="text-accent">РІРѕРїСЂРѕСЃС‹</span></h2>
+            <p class="section__subtitle">РќРµ РЅР°С€Р»Рё РѕС‚РІРµС‚? РџРѕР·РІРѕРЅРёС‚Рµ: <a href="tel:+79991234567" class="text-accent">+7 (999) 123-45-67</a></p>
+        </div>
+        <div class="faq__list" data-animate="fade-up">
+            <div class="faq__item">
+                <button class="faq__question">
+                    <span>РЎРєРѕР»СЊРєРѕ РІСЂРµРјРµРЅРё Р·Р°РЅРёРјР°РµС‚ РґРµС‚РµР№Р»РёРЅРі?</span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__answer">
+                    <p>Р—Р°РІРёСЃРёС‚ РѕС‚ РѕР±СЉС‘РјР° СЂР°Р±РѕС‚. РџРѕР»РёСЂРѕРІРєР° РєСѓР·РѕРІР° вЂ” 3вЂ“5 С‡Р°СЃРѕРІ. РљРµСЂР°РјРёС‡РµСЃРєРѕРµ РїРѕРєСЂС‹С‚РёРµ вЂ” 1 РґРµРЅСЊ. РџРѕР»РЅС‹Р№ РґРµС‚РµР№Р»РёРЅРі вЂ” 1вЂ“2 РґРЅСЏ. РўРѕС‡РЅС‹Рµ СЃСЂРѕРєРё РѕР·РІСѓС‡РёРј РїРѕСЃР»Рµ РѕС†РµРЅРєРё РІР°С€РµРіРѕ Р°РІС‚Рѕ.</p>
+                </div>
+            </div>
+            <div class="faq__item">
+                <button class="faq__question">
+                    <span>РљР°РєРёРµ РјР°С‚РµСЂРёР°Р»С‹ РёСЃРїРѕР»СЊР·СѓРµС‚Рµ?</span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__answer">
+                    <p>Р Р°Р±РѕС‚Р°СЋ СЃ СЃРµСЂС‚РёС„РёС†РёСЂРѕРІР°РЅРЅС‹РјРё РјР°С‚РµСЂРёР°Р»Р°РјРё: Koch Chemie, Gyeon, Sonax. РўРѕР»СЊРєРѕ РѕСЂРёРіРёРЅР°Р»СЊРЅР°СЏ РїСЂРѕРґСѓРєС†РёСЏ вЂ” РЅРёРєР°РєРёС… РїРѕРґРґРµР»РѕРє. РќР° РєР°Р¶РґС‹Р№ РјР°С‚РµСЂРёР°Р» РµСЃС‚СЊ СЃРµСЂС‚РёС„РёРєР°С‚.</p>
+                </div>
+            </div>
+            <div class="faq__item">
+                <button class="faq__question">
+                    <span>Р•СЃС‚СЊ Р»Рё РіР°СЂР°РЅС‚РёСЏ?</span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__answer">
+                    <p>Р”Р°. Р“Р°СЂР°РЅС‚РёСЏ РґРѕ 2 Р»РµС‚ РЅР° РєРµСЂР°РјРёС‡РµСЃРєРѕРµ РїРѕРєСЂС‹С‚РёРµ Рё РѕРєР»РµР№РєСѓ PPF. Р•СЃР»Рё РїРѕРєСЂС‹С‚РёРµ РѕС‚СЃР»РѕРёС‚СЃСЏ вЂ” РїРµСЂРµРґРµР»Р°РµРј Р·Р° СЃРІРѕР№ СЃС‡С‘С‚. Р‘РµР· РІРѕРїСЂРѕСЃРѕРІ.</p>
+                </div>
+            </div>
+            <div class="faq__item">
+                <button class="faq__question">
+                    <span>РњРѕР¶РЅРѕ Р»Рё РѕРїР»Р°С‚РёС‚СЊ РєР°СЂС‚РѕР№?</span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__answer">
+                    <p>Р”Р°. РџСЂРёРЅРёРјР°СЋ РЅР°Р»РёС‡РЅС‹Рµ Рё Р±Р°РЅРєРѕРІСЃРєРёРµ РєР°СЂС‚С‹. РњРѕР¶РЅРѕ РѕРїР»Р°С‚РёС‚СЊ РїРѕСЃР»Рµ РІС‹РїРѕР»РЅРµРЅРёСЏ СЂР°Р±РѕС‚ вЂ” РїРѕ С„Р°РєС‚Сѓ СЂРµР·СѓР»СЊС‚Р°С‚Р°.</p>
+                </div>
+            </div>
+            <div class="faq__item">
+                <button class="faq__question">
+                    <span>Р Р°Р±РѕС‚Р°РµС‚Рµ Р»Рё СЃ РІС‹РµР·РґРѕРј?</span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__answer">
+                    <p>Р”Р°. Р’С‹РµР·Рґ РІРѕР·РјРѕР¶РµРЅ РїРѕ РіРѕСЂРѕРґСѓ Рё Р±Р»РёР¶РЅРµРјСѓ РџРѕРґРјРѕСЃРєРѕРІСЊСЋ. РЎС‚РѕРёРјРѕСЃС‚СЊ РІС‹РµР·РґР° РѕР±СЃСѓР¶РґР°РµС‚СЃСЏ РёРЅРґРёРІРёРґСѓР°Р»СЊРЅРѕ.</p>
+                </div>
+            </div>
+            <div class="faq__item">
+                <button class="faq__question">
+                    <span>РљРµСЂР°РјРёРєР° vs РїР»С‘РЅРєР° вЂ” С‡С‚Рѕ Р»СѓС‡С€Рµ?</span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__answer">
+                    <p>РљРµСЂР°РјРёРєР° вЂ” С‚РѕРЅРєРѕРµ Р·Р°С‰РёС‚РЅРѕРµ РїРѕРєСЂС‹С‚РёРµ, Р·Р°С‰РёС‰Р°РµС‚ РѕС‚ СЂРµР°РіРµРЅС‚РѕРІ Рё РЈР¤. РџР»С‘РЅРєР° PPF вЂ” С„РёР·РёС‡РµСЃРєР°СЏ Р·Р°С‰РёС‚Р° РѕС‚ СЃРєРѕР»РѕРІ Рё С†Р°СЂР°РїРёРЅ. Р›СѓС‡С€РёР№ РІР°СЂРёР°РЅС‚ вЂ” РєРѕРјР±РёРЅР°С†РёСЏ: РїР»С‘РЅРєР° РЅР° РїРµСЂРµРґРЅСЋСЋ С‡Р°СЃС‚СЊ + РєРµСЂР°РјРёРєР° РЅР° РІРµСЃСЊ РєСѓР·РѕРІ.</p>
+                </div>
+            </div>
+            <div class="faq__item">
+                <button class="faq__question">
+                    <span>РљР°Рє С‡Р°СЃС‚Рѕ РЅСѓР¶РЅРѕ РґРµР»Р°С‚СЊ РґРµС‚РµР№Р»РёРЅРі?</span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__answer">
+                    <p>Р РµРєРѕРјРµРЅРґСѓСЋ СЂР°Р· РІ 6вЂ“12 РјРµСЃСЏС†РµРІ. Р’ СѓСЃР»РѕРІРёСЏС… РіРѕСЂРѕРґР° (СЂРµР°РіРµРЅС‚С‹, РїС‹Р»СЊ, РЈР¤) вЂ” С‡Р°С‰Рµ. РџРѕР»РёСЂРѕРІРєР° + РєРµСЂР°РјРёРєР° СЂР°Р· РІ РіРѕРґ СЃРѕС…СЂР°РЅСЏС‚ РІР°С€ Р°РІС‚РѕРјРѕР±РёР»СЊ РІ РёРґРµР°Р»СЊРЅРѕРј СЃРѕСЃС‚РѕСЏРЅРёРё.</p>
+                </div>
+            </div>
+            <div class="faq__item">
+                <button class="faq__question">
+                    <span>РњРѕР¶РЅРѕ Р»Рё РїРѕСЃРјРѕС‚СЂРµС‚СЊ РІР°С€Рё СЂР°Р±РѕС‚С‹?</span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__answer">
+                    <p>Р”Р°. Р’СЃРµ С„РѕС‚Рѕ вЂ” СЂРµР°Р»СЊРЅС‹Рµ, Р±РµР· С„РѕС‚РѕС€РѕРїР°. РњРѕР¶РµС‚Рµ РїСЂРёРµС…Р°С‚СЊ Рё СѓРІРёРґРµС‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ Р»РёС‡РЅРѕ. РўР°РєР¶Рµ СЃСЃС‹Р»РєРё РЅР° РѕС‚Р·С‹РІС‹ РµСЃС‚СЊ РІ РЇРЅРґРµРєСЃ.РљР°СЂС‚Р°С… Рё 2Р“РРЎ.</p>
+                </div>
+            </div>
+            <div class="faq__item">
+                <button class="faq__question">
+                    <span>РќР°СЂСѓС€Р°РµС‚СЃСЏ Р»Рё Р·Р°РІРѕРґСЃРєР°СЏ РіР°СЂР°РЅС‚РёСЏ?</span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__answer">
+                    <p>РќРµС‚. Р’СЃРµ СЂР°Р±РѕС‚С‹ РїСЂРѕРІРѕРґСЏС‚СЃСЏ РїРѕ Р±РµР·РѕРїР°СЃРЅС‹Рј С‚РµС…РЅРѕР»РѕРіРёСЏРј. РњС‹ РЅРµ РІРјРµС€РёРІР°РµРјСЃСЏ РІ РєРѕРЅСЃС‚СЂСѓРєС†РёСЋ Р°РІС‚РѕРјРѕР±РёР»СЏ вЂ” С‚РѕР»СЊРєРѕ РІРѕСЃСЃС‚Р°РЅР°РІР»РёРІР°РµРј Рё Р·Р°С‰РёС‰Р°РµРј Р›РљРџ Рё СЃР°Р»РѕРЅ.</p>
+                </div>
+            </div>
+            <div class="faq__item">
+                <button class="faq__question">
+                    <span>РЎРєРѕР»СЊРєРѕ СЃС‚РѕРёС‚ РґРµС‚РµР№Р»РёРЅРі РјРѕРµРіРѕ Р°РІС‚Рѕ?</span>
+                    <span class="faq__icon">+</span>
+                </button>
+                <div class="faq__answer">
+                    <p>РћС‚РїСЂР°РІСЊС‚Рµ С„РѕС‚Рѕ СЃ 4 СЃС‚РѕСЂРѕРЅ вЂ” РїСЂРёС€Р»С‘Рј С‚РѕС‡РЅС‹Р№ СЂР°СЃС‡С‘С‚ Р·Р° 10 РјРёРЅСѓС‚. Р¦РµРЅР° С„РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ Рё РЅРµ РёР·РјРµРЅРёС‚СЃСЏ РїРѕСЃР»Рµ РЅР°С‡Р°Р»Р° СЂР°Р±РѕС‚.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--cta" id="cta">
+    <div class="container">
+        <div class="cta__grid" data-animate="fade-up">
+            <div class="cta__image">
+                <div class="cta__image-placeholder">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
+                        <rect x="2" y="6" width="20" height="12" rx="2"/>
+                        <path d="M2 10H22"/>
+                        <path d="M6 6V4"/>
+                        <path d="M18 6V4"/>
+                        <circle cx="7" cy="15" r="1.5"/>
+                        <circle cx="17" cy="15" r="1.5"/>
+                    </svg>
+                    <span>Р¤РѕС‚Рѕ СЃС‚СѓРґРёРё</span>
+                </div>
+            </div>
+            <div class="cta__content">
+                <h2 class="cta__title">Р“РѕС‚РѕРІС‹ РїСЂРµРѕР±СЂР°Р·РёС‚СЊ <span class="text-accent">РІР°С€ Р°РІС‚РѕРјРѕР±РёР»СЊ?</span></h2>
+                <p class="cta__subtitle">РћСЃС‚Р°РІСЊС‚Рµ Р·Р°СЏРІРєСѓ вЂ” РїРѕР»СѓС‡РёС‚Рµ СЂР°СЃС‡С‘С‚ Р·Р° 10 РјРёРЅСѓС‚ Рё СЃРєРёРґРєСѓ 10% РЅР° РїРµСЂРІС‹Р№ Р·Р°РєР°Р·.</p>
+                <form class="cta__form" id="ctaForm">
+                    <input type="text" class="cta__input" placeholder="Р’Р°С€Рµ РёРјСЏ" required>
+                    <input type="tel" class="cta__input" placeholder="Р’Р°С€ С‚РµР»РµС„РѕРЅ" required>
+                    <button type="submit" class="btn btn--lg btn--full">РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃС‡С‘С‚ + СЃРєРёРґРєСѓ 10%</button>
+                </form>
+                <p class="cta__note">Р Р°СЃС‡С‘С‚ Р±РµСЃРїР»Р°С‚РЅС‹Р№ Рё РЅРё Рє С‡РµРјСѓ РЅРµ РѕР±СЏР·С‹РІР°РµС‚. РњС‹ РїСЂРёС€Р»С‘Рј СЃС‚РѕРёРјРѕСЃС‚СЊ вЂ” РІС‹ СЂРµС€РёС‚Рµ.</p>
+                <div class="cta__contacts">
+                    <a href="tel:+79991234567" class="cta__contact">+7 (999) 123-45-67</a>
+                    <a href="#" class="cta__contact">WhatsApp</a>
+                    <a href="#" class="cta__contact">Telegram</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <span class="footer__logo"><span class="text-accent">PREMIUM</span> DETAILING</span>
+                <p class="footer__tagline">РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Р№ РґРµС‚РµР№Р»РёРЅРі СЃ РіР°СЂР°РЅС‚РёРµР№</p>
+            </div>
+            <div class="footer__contacts">
+                <a href="tel:+79991234567" class="footer__phone">+7 (999) 123-45-67</a>
+                <a href="#" class="footer__link">WhatsApp</a>
+                <a href="#" class="footer__link">Telegram</a>
+                <a href="#" class="footer__link">VK</a>
+            </div>
+            <div class="footer__address">
+                <p>Рі. РњРѕСЃРєРІР°, СѓР». РџСЂРёРјРµСЂРЅР°СЏ, Рґ. 1</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2024вЂ“2025. Р’СЃРµ РїСЂР°РІР° Р·Р°С‰РёС‰РµРЅС‹. РЎР°Р№С‚ РЅРµ СЏРІР»СЏРµС‚СЃСЏ РїСѓР±Р»РёС‡РЅРѕР№ РѕС„РµСЂС‚РѕР№.</p>
+            <div class="footer__links">
+                <a href="#">РџРѕР»РёС‚РёРєР° РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё</a>
+                <a href="#">РЎРѕРіР»Р°СЃРёРµ РЅР° РѕР±СЂР°Р±РѕС‚РєСѓ РџР”РЅ</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- MOBILE CTA -->
+<a href="#cta" class="mobile-cta" id="mobileCta">РЈР·РЅР°С‚СЊ СЃС‚РѕРёРјРѕСЃС‚СЊ</a>
+
+<!-- WIDGET BUTTON -->
+<div class="widget" id="widget">
+    <button class="widget__btn" id="widgetBtn" aria-label="РџРѕР»РµР·РЅС‹Рµ РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹">
+        <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M96.5 23.8H70.4C76.1 21.9 80.9 19.4 82.7 16.3L82.8 16.2C83.7 14.4 84.3 12 81.6 7.7C78.9 3.4 76.4 2.9 74.7 2.9C66.9 2.9 55.6 17.3 51.2 23.5L51 23.8H48.9L48.7 23.6C44.3 17.4 33.1 2.9 25.2 2.9C22.9 2.9 20.6 4.5 18.5 7.7C17.7 9.1 15.3 13.2 17.4 16.3L17.6 16.5C19.5 19.7 24.2 22.1 29.3 23.8H3.5C2.1 23.8 1 24.9 1 26.3V42.8C1 44.2 2.1 45.3 3.5 45.3H6.3V94.5C6.3 95.9 7.4 97 8.8 97H91.2C92.6 97 93.7 95.9 93.7 94.5V45.3H96.5C97.9 45.3 99 44.2 99 42.8V26.3C99 25 97.9 23.8 96.5 23.8ZM74.7 8C75 8 75.9 8 77.4 10.4C78.8 12.7 78.6 13.4 78.4 13.9C76.9 16.4 69.5 19.6 59 21.6C66.3 12.3 72.1 8 74.7 8ZM21.8 13.9L21.6 13.6L21.5 13.5C21.5 13.2 21.6 12.3 22.7 10.4C24 8.4 24.9 8 25.1 8C27.7 8 33.5 12.3 40.9 21.8C29.9 19.6 23.1 16.4 21.8 13.9ZM6 39.9V29.4C6 29.1 6.2 28.9 6.5 28.9H47.5V40.4H6.5C6.2 40.4 6 40.2 6 39.9ZM11.3 45.4H47.5V92.1H11.3V45.4ZM88.7 92.1H52.5V45.4H88.7V92.1ZM93.5 40.4H52.4V28.9H93.5C93.8 28.9 94 29.1 94 29.4V39.9C94 40.2 93.8 40.4 93.5 40.4Z" fill="currentColor"/>
+        </svg>
+    </button>
+    <div class="widget__menu" id="widgetMenu">
+        <button class="widget__option" data-modal="quizModal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <span>РљР°РєРѕРµ РїРѕРєСЂС‹С‚РёРµ РІР°Рј РЅСѓР¶РЅРѕ?</span>
+        </button>
+        <button class="widget__option" data-modal="checklistModal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>Р§РµРє-Р»РёСЃС‚: 10 РїСЂР°РІРёР» СѓС…РѕРґР° Р·Р° Р›РљРџ</span>
+        </button>
+        <button class="widget__option" data-modal="calcModal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2"/>
+                <line x1="8" y1="6" x2="16" y2="6"/>
+                <line x1="8" y1="10" x2="10" y2="10"/>
+                <line x1="14" y1="10" x2="16" y2="10"/>
+                <line x1="8" y1="14" x2="10" y2="14"/>
+                <line x1="14" y1="14" x2="16" y2="14"/>
+                <line x1="8" y1="18" x2="16" y2="18"/>
+            </svg>
+            <span>РљР°Р»СЊРєСѓР»СЏС‚РѕСЂ СЃС‚РѕРёРјРѕСЃС‚Рё</span>
+        </button>
+    </div>
+</div>
+
+<!-- QUIZ MODAL -->
+<div class="modal" id="quizModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+        <button class="modal__close" id="quizClose">&times;</button>
+        <div class="quiz" id="quiz">
+            <div class="quiz__step quiz__step--active" data-step="1">
+                <div class="quiz__progress"><div class="quiz__progress-bar" style="width: 20%"></div></div>
+                <h3 class="quiz__question">РљР°РєРѕР№ Сѓ РІР°СЃ Р°РІС‚РѕРјРѕР±РёР»СЊ?</h3>
+                <div class="quiz__options">
+                    <button class="quiz__option" data-value="economy">Р­РєРѕРЅРѕРј / СЃСЂРµРґРЅРёР№ СЃРµРіРјРµРЅС‚</button>
+                    <button class="quiz__option" data-value="business">Р‘РёР·РЅРµСЃ-РєР»Р°СЃСЃ</button>
+                    <button class="quiz__option" data-value="premium">РџСЂРµРјРёСѓРј / Р»СЋРєСЃ</button>
+                </div>
+            </div>
+            <div class="quiz__step" data-step="2">
+                <div class="quiz__progress"><div class="quiz__progress-bar" style="width: 40%"></div></div>
+                <h3 class="quiz__question">Р“РґРµ РІС‹ С‡Р°С‰Рµ РІСЃРµРіРѕ РїР°СЂРєСѓРµС‚Рµ Р°РІС‚Рѕ?</h3>
+                <div class="quiz__options">
+                    <button class="quiz__option" data-value="street">РќР° СѓР»РёС†Рµ</button>
+                    <button class="quiz__option" data-value="parking">РџРѕРґР·РµРјРЅС‹Р№ РїР°СЂРєРёРЅРі</button>
+                    <button class="quiz__option" data-value="garage">Р’ РіР°СЂР°Р¶Рµ</button>
+                </div>
+            </div>
+            <div class="quiz__step" data-step="3">
+                <div class="quiz__progress"><div class="quiz__progress-bar" style="width: 60%"></div></div>
+                <h3 class="quiz__question">Р§С‚Рѕ РґР»СЏ РІР°СЃ РІР°Р¶РЅРµРµ?</h3>
+                <div class="quiz__options">
+                    <button class="quiz__option" data-value="protect">Р—Р°С‰РёС‚Р° РѕС‚ СЃРєРѕР»РѕРІ Рё С†Р°СЂР°РїРёРЅ</button>
+                    <button class="quiz__option" data-value="gloss">Р“Р»СѓР±РѕРєРёР№ Р±Р»РµСЃРє Рё РіР»СЏРЅРµС†</button>
+                    <button class="quiz__option" data-value="durability">Р”РѕР»РіРѕРІРµС‡РЅРѕСЃС‚СЊ (3+ РіРѕРґР°)</button>
+                </div>
+            </div>
+            <div class="quiz__step" data-step="4">
+                <div class="quiz__progress"><div class="quiz__progress-bar" style="width: 80%"></div></div>
+                <h3 class="quiz__question">РљР°РєРѕР№ Р±СЋРґР¶РµС‚ СЂР°СЃСЃРјР°С‚СЂРёРІР°РµС‚Рµ?</h3>
+                <div class="quiz__options">
+                    <button class="quiz__option" data-value="up15">Р”Рѕ 15 000 в‚Ѕ</button>
+                    <button class="quiz__option" data-value="1530">15 000 вЂ“ 30 000 в‚Ѕ</button>
+                    <button class="quiz__option" data-value="30plus">Р‘РѕР»РµРµ 30 000 в‚Ѕ</button>
+                </div>
+            </div>
+            <div class="quiz__step" data-step="5">
+                <div class="quiz__progress"><div class="quiz__progress-bar" style="width: 100%"></div></div>
+                <div class="quiz__result">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L3 7V12C3 17.25 6.75 21.5 12 22.75C17.25 21.5 21 17.25 21 12V7L12 2Z"/>
+                        <path d="M9 12L11 14L15 10"/>
+                    </svg>
+                    <h3 class="quiz__result-title">Р РµРєРѕРјРµРЅРґР°С†РёСЏ РґР»СЏ РІР°СЃ</h3>
+                    <p class="quiz__result-text" id="quizResult">РљРµСЂР°РјРёС‡РµСЃРєРѕРµ РїРѕРєСЂС‹С‚РёРµ вЂ” РѕРїС‚РёРјР°Р»СЊРЅС‹Р№ Р±Р°Р»Р°РЅСЃ С†РµРЅС‹ Рё Р·Р°С‰РёС‚С‹.</p>
+                    <a href="#cta" class="btn btn--lg quiz__cta" id="quizCta">Р—Р°РїРёСЃР°С‚СЊСЃСЏ Рё РїРѕР»СѓС‡РёС‚СЊ СЃРєРёРґРєСѓ 10%</a>
+                    <p class="quiz__result-note">Р Р°СЃС‡С‘С‚ Р±РµСЃРїР»Р°С‚РЅС‹Р№. Р¦РµРЅР° С„РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CHECKLIST MODAL -->
+<div class="modal" id="checklistModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+        <button class="modal__close" id="checklistClose">&times;</button>
+        <div class="checklist">
+            <h3 class="checklist__title">10 РїСЂР°РІРёР» СѓС…РѕРґР° Р·Р° Р›РљРџ</h3>
+            <p class="checklist__subtitle">РЎРѕС…СЂР°РЅРё СЃРµР±Рµ вЂ” РїСЂРёРіРѕРґРёС‚СЃСЏ!</p>
+            <ul class="checklist__list">
+                <li class="checklist__item"><input type="checkbox" id="cl1"><label for="cl1">РњРѕР№С‚Рµ Р°РІС‚Рѕ РєР°Р¶РґС‹Рµ 7вЂ“10 РґРЅРµР№. Р’ РіРѕСЂРѕРґРµ СЂРµР°РіРµРЅС‚С‹ Рё РїС‹Р»СЊ СЂР°Р·СЂСѓС€Р°СЋС‚ Р»Р°Рє Р·Р° РЅРµРґРµР»Рё.</label></li>
+                <li class="checklist__item"><input type="checkbox" id="cl2"><label for="cl2">РСЃРїРѕР»СЊР·СѓР№С‚Рµ С‚РѕР»СЊРєРѕ pH-РЅРµР№С‚СЂР°Р»СЊРЅС‹Рµ С€Р°РјРїСѓРЅРё. РћР±С‹С‡РЅР°СЏ В«СЂРѕРјР°С€РєР°В» СЃРЅРёРјР°РµС‚ РІРѕСЃРє Р·Р° 2 РјРѕР№РєРё.</label></li>
+                <li class="checklist__item"><input type="checkbox" id="cl3"><label for="cl3">РЎСѓС€РёС‚Рµ РјРёРєСЂРѕС„РёР±СЂРѕР№, РЅРµ РїРѕР»РѕС‚РµРЅС†РµРј. РњР°С…СЂРѕРІРѕРµ РїРѕР»РѕС‚РµРЅС†Рµ РѕСЃС‚Р°РІР»СЏРµС‚ С†Р°СЂР°РїРёРЅС‹.</label></li>
+                <li class="checklist__item"><input type="checkbox" id="cl4"><label for="cl4">РќР°РЅРѕСЃРёС‚Рµ РІРѕСЃРє РёР»Рё sealant СЂР°Р· РІ 2вЂ“3 РјРµСЃСЏС†Р°. Р­С‚Рѕ РїСЂРѕРґР»РµРІР°РµС‚ Р·Р°С‰РёС‚Сѓ Р›РљРџ.</label></li>
+                <li class="checklist__item"><input type="checkbox" id="cl5"><label for="cl5">РќРµ РїР°СЂРєСѓР№С‚Рµ РїРѕРґ РґРµСЂРµРІСЊСЏРјРё. РЎРѕРє Рё РїС‚РёС‡СЊРё СЌРєСЃРєСЂРµРјРµРЅС‚С‹ РІСЉРµРґР°СЋС‚СЃСЏ РІ Р»Р°Рє Р·Р° С‡Р°СЃС‹.</label></li>
+                <li class="checklist__item"><input type="checkbox" id="cl6"><label for="cl6">РЈРґР°Р»СЏР№С‚Рµ РїС‚РёС‡РёР№ РїРѕРјС‘С‚ СЃСЂР°Р·Сѓ вЂ” РІР»Р°Р¶РЅР°СЏ СЃР°Р»С„РµС‚РєР° + РІРѕРґР°. РќРµ С‚СЂРёС‚Рµ В«РЅР°СЃСѓС…РѕВ».</label></li>
+                <li class="checklist__item"><input type="checkbox" id="cl7"><label for="cl7">РџСЂРѕС…РѕРґРёС‚Рµ РїРѕР»РёСЂРѕРІРєСѓ СЂР°Р· РІ 1вЂ“2 РіРѕРґР°. РћРЅР° СѓР±РёСЂР°РµС‚ РјРёРєСЂРѕС†Р°СЂР°РїРёРЅС‹ Рё РІРѕР·РІСЂР°С‰Р°РµС‚ РіР»СѓР±РёРЅСѓ С†РІРµС‚Р°.</label></li>
+                <li class="checklist__item"><input type="checkbox" id="cl8"><label for="cl8">РќРµ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ Р°Р±СЂР°Р·РёРІРЅС‹Рµ РїР°СЃС‚С‹ Р±РµР· РЅСѓР¶РґС‹. РћРЅРё СЃРЅРёРјР°СЋС‚ СЃР»РѕР№ Р»Р°РєР°.</label></li>
+                <li class="checklist__item"><input type="checkbox" id="cl9"><label for="cl9">РљРµСЂР°РјРёС‡РµСЃРєРѕРµ РїРѕРєСЂС‹С‚РёРµ вЂ” Р»СѓС‡С€Р°СЏ РёРЅРІРµСЃС‚РёС†РёСЏ. Р—Р°С‰РёС‚Р° РЅР° 2вЂ“3 РіРѕРґР° Р·Р° 15вЂ“25 С‚С‹СЃ. в‚Ѕ.</label></li>
+                <li class="checklist__item"><input type="checkbox" id="cl10"><label for="cl10">Р РµРіСѓР»СЏСЂРЅРѕ РїСЂРѕРІРµСЂСЏР№С‚Рµ Р›РљРџ РЅР° СЃРєРѕР»С‹. Р—Р°РјР°Р·С‹РІР°Р№С‚Рµ Р°РєСЂРёР»РѕРј вЂ” РёРЅР°С‡Рµ РЅР°С‡РЅС‘С‚СЃСЏ РєРѕСЂСЂРѕР·РёСЏ.</label></li>
+            </ul>
+            <div class="checklist__cta">
+                <p>РќСѓР¶РЅР° РїРѕРјРѕС‰СЊ СЃ Р›РљРџ?</p>
+                <a href="#cta" class="btn">Р—Р°РїРёСЃР°С‚СЊСЃСЏ РЅР° РѕСЃРјРѕС‚СЂ</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CALCULATOR MODAL -->
+<div class="modal" id="calcModal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+        <button class="modal__close" id="calcClose">&times;</button>
+        <div class="calc" id="calc">
+            <div class="calc__step calc__step--active" data-step="1">
+                <h3 class="calc__title">РљР°Р»СЊРєСѓР»СЏС‚РѕСЂ СЃС‚РѕРёРјРѕСЃС‚Рё</h3>
+                <p class="calc__subtitle">РЁР°Рі 1 РёР· 3 вЂ” РўРёРї Р°РІС‚РѕРјРѕР±РёР»СЏ</p>
+                <div class="calc__options">
+                    <button class="calc__option" data-value="economy">
+                        <span class="calc__option-name">Р­РєРѕРЅРѕРј / СЃСЂРµРґРЅРёР№</span>
+                        <span class="calc__option-example">Volkswagen, Kia, Hyundai</span>
+                    </button>
+                    <button class="calc__option" data-value="business">
+                        <span class="calc__option-name">Р‘РёР·РЅРµСЃ-РєР»Р°СЃСЃ</span>
+                        <span class="calc__option-example">BMW, Mercedes, Audi</span>
+                    </button>
+                    <button class="calc__option" data-value="premium">
+                        <span class="calc__option-name">РџСЂРµРјРёСѓРј / Р»СЋРєСЃ</span>
+                        <span class="calc__option-example">Porsche, Range Rover, Bentley</span>
+                    </button>
+                </div>
+            </div>
+            <div class="calc__step" data-step="2">
+                <h3 class="calc__title">РљР°Р»СЊРєСѓР»СЏС‚РѕСЂ СЃС‚РѕРёРјРѕСЃС‚Рё</h3>
+                <p class="calc__subtitle">РЁР°Рі 2 РёР· 3 вЂ” РЈСЃР»СѓРіР°</p>
+                <div class="calc__options">
+                    <button class="calc__option" data-value="polish">
+                        <span class="calc__option-name">РџРѕР»РёСЂРѕРІРєР°</span>
+                        <span class="calc__option-price" id="calcPolish">РѕС‚ 8 000 в‚Ѕ</span>
+                    </button>
+                    <button class="calc__option" data-value="ceramic">
+                        <span class="calc__option-name">РљРµСЂР°РјРёС‡РµСЃРєРѕРµ РїРѕРєСЂС‹С‚РёРµ</span>
+                        <span class="calc__option-price" id="calcCeramic">РѕС‚ 18 000 в‚Ѕ</span>
+                    </button>
+                    <button class="calc__option" data-value="clean">
+                        <span class="calc__option-name">РҐРёРјС‡РёСЃС‚РєР° СЃР°Р»РѕРЅР°</span>
+                        <span class="calc__option-price" id="calcClean">РѕС‚ 7 000 в‚Ѕ</span>
+                    </button>
+                    <button class="calc__option" data-value="ppf">
+                        <span class="calc__option-name">РћРєР»РµР№РєР° PPF</span>
+                        <span class="calc__option-price" id="calcPpf">РѕС‚ 80 000 в‚Ѕ</span>
+                    </button>
+                </div>
+            </div>
+            <div class="calc__step" data-step="3">
+                <div class="calc__result">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C8A97E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="2" width="16" height="20" rx="2"/>
+                        <line x1="8" y1="6" x2="16" y2="6"/>
+                        <line x1="8" y1="10" x2="10" y2="10"/>
+                        <line x1="14" y1="10" x2="16" y2="10"/>
+                        <line x1="8" y1="14" x2="10" y2="14"/>
+                        <line x1="14" y1="14" x2="16" y2="14"/>
+                        <line x1="8" y1="18" x2="16" y2="18"/>
+                    </svg>
+                    <h3 class="calc__result-title">Р’Р°С€ СЂР°СЃС‡С‘С‚</h3>
+                    <p class="calc__result-service" id="calcResultService">РљРµСЂР°РјРёС‡РµСЃРєРѕРµ РїРѕРєСЂС‹С‚РёРµ</p>
+                    <p class="calc__result-price" id="calcResultPrice">РѕС‚ 18 000 в‚Ѕ</p>
+                    <p class="calc__result-note">РўРѕС‡РЅР°СЏ С†РµРЅР° вЂ” РїРѕСЃР»Рµ РѕСЃРјРѕС‚СЂР° Р°РІС‚Рѕ. Р¤РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ, Р±РµР· РґРѕРїР»Р°С‚.</p>
+                    <a href="#cta" class="btn btn--lg calc__cta">Р—Р°РїРёСЃР°С‚СЊСЃСЏ РїРѕ СЌС‚РѕР№ С†РµРЅРµ</a>
+                    <button class="btn calc__restart" id="calcRestart">Р’С‹Р±СЂР°С‚СЊ Р·Р°РЅРѕРІРѕ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+/* ========================================
+   DOM Content Loaded
+   ======================================== */
+document.addEventListener('DOMContentLoaded', () => {
+    initHeader();
+    initBurger();
+    initMobileMenu();
+    initSmoothScroll();
+    initServiceTabs();
+    initPortfolioSlider();
+    initReviewsSlider();
+    initFAQ();
+    initForm();
+    initAnimations();
+    initHeroParticles();
+});
+
+/* ========================================
+   Header Scroll
+   ======================================== */
+function initHeader() {
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        lastScroll = currentScroll;
+    });
+}
+
+/* ========================================
+   Burger Menu
+   ======================================== */
+function initBurger() {
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+}
+
+/* ========================================
+   Mobile Menu Links
+   ======================================== */
+function initMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const links = mobileMenu.querySelectorAll('.mobile-menu__link, .mobile-menu__cta');
+    const burger = document.getElementById('burger');
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            burger.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+}
+
+/* ========================================
+   Smooth Scroll
+   ======================================== */
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+
+/* ========================================
+   Service Tabs
+   ======================================== */
+function initServiceTabs() {
+    const tabs = document.querySelectorAll('.services__tab');
+    const panels = document.querySelectorAll('.services__panel');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const targetId = tab.dataset.tab;
+
+            tabs.forEach(t => t.classList.remove('active'));
+            panels.forEach(p => p.classList.remove('active'));
+
+            tab.classList.add('active');
+            document.getElementById(`panel-${targetId}`).classList.add('active');
+        });
+    });
+}
+
+/* ========================================
+   Portfolio Slider
+   ======================================== */
+function initPortfolioSlider() {
+    const track = document.getElementById('portfolioTrack');
+    const slides = track.querySelectorAll('.portfolio__slide');
+    const prevBtn = document.getElementById('portfolioPrev');
+    const nextBtn = document.getElementById('portfolioNext');
+    const dotsContainer = document.getElementById('portfolioDots');
+
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+
+    // Create dots
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('portfolio__dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    }
+
+    const dots = dotsContainer.querySelectorAll('.portfolio__dot');
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentSlide);
+        });
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Auto-play
+    let autoplay = setInterval(nextSlide, 5000);
+
+    // Pause on hover
+    const slider = document.querySelector('.portfolio__slider');
+    slider.addEventListener('mouseenter', () => clearInterval(autoplay));
+    slider.addEventListener('mouseleave', () => {
+        autoplay = setInterval(nextSlide, 5000);
+    });
+
+    // Touch support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    track.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) nextSlide();
+            else prevSlide();
+        }
+    }, { passive: true });
+}
+
+/* ========================================
+   Reviews Slider
+   ======================================== */
+function initReviewsSlider() {
+    const track = document.getElementById('reviewsTrack');
+    const slides = track.querySelectorAll('.reviews__slide');
+    const prevBtn = document.getElementById('reviewsPrev');
+    const nextBtn = document.getElementById('reviewsNext');
+    const dotsContainer = document.getElementById('reviewsDots');
+
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+
+    // Create dots
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('reviews__dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    }
+
+    const dots = dotsContainer.querySelectorAll('.reviews__dot');
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentSlide);
+        });
+    }
+
+    function goToSlide(index) {
+        currentSlide = index;
+        updateSlider();
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Auto-play
+    let autoplay = setInterval(nextSlide, 6000);
+
+    // Pause on hover
+    const slider = document.querySelector('.reviews__slider');
+    slider.addEventListener('mouseenter', () => clearInterval(autoplay));
+    slider.addEventListener('mouseleave', () => {
+        autoplay = setInterval(nextSlide, 6000);
+    });
+
+    // Touch support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    track.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) nextSlide();
+            else prevSlide();
+        }
+    }, { passive: true });
+}
+
+/* ========================================
+   FAQ Accordion
+   ======================================== */
+function initFAQ() {
+    const items = document.querySelectorAll('.faq__item');
+
+    items.forEach(item => {
+        const question = item.querySelector('.faq__question');
+
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all
+            items.forEach(i => i.classList.remove('active'));
+
+            // Open clicked (if it wasn't active)
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+}
+
+/* ========================================
+   Form Submission
+   ======================================== */
+function initForm() {
+    const form = document.getElementById('ctaForm');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = form.querySelector('input[type="text"]').value;
+        const phone = form.querySelector('input[type="tel"]').value;
+
+        // Here you would normally send data to server
+        console.log('Form submitted:', { name, phone });
+
+        // Show success message
+        form.innerHTML = `
+            <div style="text-align: center; padding: 40px 0;">
+                <div style="font-size: 48px; margin-bottom: 16px;">&#10004;</div>
+                <h3 style="font-size: 20px; margin-bottom: 8px;">Р—Р°СЏРІРєР° РѕС‚РїСЂР°РІР»РµРЅР°!</h3>
+                <p style="color: #A0A0A0;">РњС‹ СЃРІСЏР¶РµРјСЃСЏ СЃ РІР°РјРё РІ С‚РµС‡РµРЅРёРµ 15 РјРёРЅСѓС‚</p>
+            </div>
+        `;
+    });
+}
+
+/* ========================================
+   Scroll Animations
+   ======================================== */
+function initAnimations() {
+    const elements = document.querySelectorAll('[data-animate]');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const delay = entry.target.dataset.delay || 0;
+                setTimeout(() => {
+                    entry.target.classList.add('animated');
+                }, parseInt(delay));
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    elements.forEach(el => observer.observe(el));
+}
+
+/* ========================================
+   Hero Particles
+   ======================================== */
+function initHeroParticles() {
+    const container = document.getElementById('heroParticles');
+    if (!container) return;
+
+    const particleCount = 40;
+
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('hero__particle');
+
+        const size = Math.random() * 3 + 1;
+        const left = Math.random() * 100;
+        const delay = Math.random() * 15;
+        const duration = Math.random() * 10 + 10;
+        const opacity = Math.random() * 0.5 + 0.2;
+
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${left}%`;
+        particle.style.animationDelay = `${delay}s`;
+        particle.style.animationDuration = `${duration}s`;
+        particle.style.opacity = opacity;
+
+        container.appendChild(particle);
+    }
+}
+
+/* ========================================
+   Widget
+   ======================================== */
+(function() {
+    const widgetBtn = document.getElementById('widgetBtn');
+    const widgetMenu = document.getElementById('widgetMenu');
+
+    widgetBtn.addEventListener('click', () => {
+        widgetBtn.classList.toggle('widget__btn--active');
+        widgetMenu.classList.toggle('widget__menu--active');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.widget')) {
+            widgetBtn.classList.remove('widget__btn--active');
+            widgetMenu.classList.remove('widget__menu--active');
+        }
+    });
+
+    // Open modals
+    document.querySelectorAll('.widget__option').forEach(option => {
+        option.addEventListener('click', () => {
+            const modalId = option.dataset.modal;
+            document.getElementById(modalId).classList.add('modal--active');
+            widgetBtn.classList.remove('widget__btn--active');
+            widgetMenu.classList.remove('widget__menu--active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close modal вЂ” one delegated handler for everything
+    function closeModal(modal) {
+        modal.classList.remove('modal--active');
+        document.body.style.overflow = '';
+    }
+
+    // Make closeModal available globally for other modules
+    window.closeModal = closeModal;
+
+    document.addEventListener('click', (e) => {
+        const modal = e.target.closest('.modal');
+        if (!modal) return;
+
+        // Close button
+        if (e.target.closest('.modal__close')) {
+            closeModal(modal);
+            return;
+        }
+        // Overlay click
+        if (e.target.classList.contains('modal__overlay')) {
+            closeModal(modal);
+            return;
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal--active').forEach(m => closeModal(m));
+        }
+    });
+
+    // Direct handlers: close modal on ANY CTA link inside modals
+    document.querySelectorAll('.modal a[href="#cta"]').forEach(link => {
+        link.addEventListener('click', () => {
+            closeModal(link.closest('.modal'));
+        });
+    });
+})();
+
+/* ========================================
+   Quiz
+   ======================================== */
+(function() {
+    const quiz = document.getElementById('quiz');
+    if (!quiz) return;
+
+    const answers = {};
+    let currentStep = 1;
+
+    quiz.addEventListener('click', (e) => {
+        const option = e.target.closest('.quiz__option');
+        if (!option) return;
+
+        const step = option.closest('.quiz__step');
+        const stepNum = parseInt(step.dataset.step);
+        answers[stepNum] = option.dataset.value;
+
+        step.classList.remove('quiz__step--active');
+        const nextStep = step.nextElementSibling;
+        if (nextStep) {
+            nextStep.classList.add('quiz__step--active');
+            currentStep = stepNum + 1;
+        }
+
+        if (currentStep === 5) {
+            generateQuizResult(answers);
+        }
+    });
+
+    function generateQuizResult(ans) {
+        const resultText = document.getElementById('quizResult');
+        let text = '';
+
+        if (ans[3] === 'protect') {
+            if (ans[4] === '30plus') {
+                text = 'РћРєР»РµР№РєР° PPF (РїР»С‘РЅРѕС‡РЅРѕРµ РїРѕРєСЂС‹С‚РёРµ) вЂ” РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ Р·Р°С‰РёС‚Р° РєСѓР·РѕРІР° РѕС‚ СЃРєРѕР»РѕРІ Рё С†Р°СЂР°РїРёРЅ. РЎС‚РѕРёРјРѕСЃС‚СЊ РѕС‚ 80 000 в‚Ѕ. РЎСЂРѕРє СЃР»СѓР¶Р±С‹ 5вЂ“7 Р»РµС‚.';
+            } else if (ans[4] === '1530') {
+                text = 'РљРµСЂР°РјРёС‡РµСЃРєРѕРµ РїРѕРєСЂС‹С‚РёРµ вЂ” РѕС‚Р»РёС‡РЅР°СЏ Р·Р°С‰РёС‚Р° РѕС‚ СЂРµР°РіРµРЅС‚РѕРІ Рё РЈР¤. РЎС‚РѕРёРјРѕСЃС‚СЊ РѕС‚ 18 000 в‚Ѕ. РЎСЂРѕРє СЃР»СѓР¶Р±С‹ 2вЂ“3 РіРѕРґР°.';
+            } else {
+                text = 'Р–РёРґРєРѕРµ СЃС‚РµРєР»Рѕ вЂ” Р±СЋРґР¶РµС‚РЅР°СЏ Р·Р°С‰РёС‚Р° РЅР° 6вЂ“12 РјРµСЃСЏС†РµРІ. РЎС‚РѕРёРјРѕСЃС‚СЊ РѕС‚ 8 000 в‚Ѕ.';
+            }
+        } else if (ans[3] === 'gloss') {
+            text = 'РџРѕР»РёСЂРѕРІРєР° + РєРµСЂР°РјРёС‡РµСЃРєРёР№ sealant вЂ” РіР»СѓР±РѕРєРёР№ Р±Р»РµСЃРє Рё Р·Р°С‰РёС‚Р° РЅР° 6вЂ“12 РјРµСЃСЏС†РµРІ. РЎС‚РѕРёРјРѕСЃС‚СЊ РѕС‚ 12 000 в‚Ѕ.';
+        } else if (ans[3] === 'durability') {
+            text = 'РљРµСЂР°РјРёС‡РµСЃРєРѕРµ РїРѕРєСЂС‹С‚РёРµ РїСЂРµРјРёСѓРј-РєР»Р°СЃСЃР° (Gyeon, Ceramic Pro) вЂ” Р·Р°С‰РёС‚Р° РЅР° 3вЂ“5 Р»РµС‚. РЎС‚РѕРёРјРѕСЃС‚СЊ РѕС‚ 25 000 в‚Ѕ.';
+        }
+
+        if (ans[1] === 'street') {
+            text += ' РЈС‡РёС‚С‹РІР°СЏ РїР°СЂРєРѕРІРєСѓ РЅР° СѓР»РёС†Рµ, СЂРµРєРѕРјРµРЅРґСѓРµРј С‚Р°РєР¶Рµ РѕР±СЂР°Р±РѕС‚Р°С‚СЊ СЃС‚С‘РєР»Р° Р°РЅС‚РёРґРѕР¶РґС‘Рј.';
+        }
+
+        resultText.textContent = text;
+    }
+})();
+
+/* ========================================
+   Calculator
+   ======================================== */
+(function() {
+    const calc = document.getElementById('calc');
+    if (!calc) return;
+
+    const prices = {
+        economy: { polish: 'РѕС‚ 8 000 в‚Ѕ', ceramic: 'РѕС‚ 18 000 в‚Ѕ', clean: 'РѕС‚ 7 000 в‚Ѕ', ppf: 'РѕС‚ 80 000 в‚Ѕ' },
+        business: { polish: 'РѕС‚ 12 000 в‚Ѕ', ceramic: 'РѕС‚ 25 000 в‚Ѕ', clean: 'РѕС‚ 10 000 в‚Ѕ', ppf: 'РѕС‚ 120 000 в‚Ѕ' },
+        premium: { polish: 'РѕС‚ 18 000 в‚Ѕ', ceramic: 'РѕС‚ 35 000 в‚Ѕ', clean: 'РѕС‚ 15 000 в‚Ѕ', ppf: 'РѕС‚ 180 000 в‚Ѕ' }
+    };
+
+    const serviceNames = {
+        polish: 'РџРѕР»РёСЂРѕРІРєР°',
+        ceramic: 'РљРµСЂР°РјРёС‡РµСЃРєРѕРµ РїРѕРєСЂС‹С‚РёРµ',
+        clean: 'РҐРёРјС‡РёСЃС‚РєР° СЃР°Р»РѕРЅР°',
+        ppf: 'РћРєР»РµР№РєР° PPF'
+    };
+
+    let selectedCar = null;
+    let selectedService = null;
+
+    calc.addEventListener('click', (e) => {
+        const option = e.target.closest('.calc__option');
+        if (!option) return;
+
+        const step = option.closest('.calc__step');
+        const stepNum = parseInt(step.dataset.step);
+
+        if (stepNum === 1) {
+            selectedCar = option.dataset.value;
+            // Update prices for car type
+            document.getElementById('calcPolish').textContent = prices[selectedCar].polish;
+            document.getElementById('calcCeramic').textContent = prices[selectedCar].ceramic;
+            document.getElementById('calcClean').textContent = prices[selectedCar].clean;
+            document.getElementById('calcPpf').textContent = prices[selectedCar].ppf;
+        } else if (stepNum === 2) {
+            selectedService = option.dataset.value;
+            // Show result
+            document.getElementById('calcResultService').textContent = serviceNames[selectedService];
+            document.getElementById('calcResultPrice').textContent = prices[selectedCar][selectedService];
+        }
+
+        step.classList.remove('calc__step--active');
+        const nextStep = step.nextElementSibling;
+        if (nextStep) nextStep.classList.add('calc__step--active');
+    });
+
+    // Restart
+    document.getElementById('calcRestart').addEventListener('click', () => {
+        calc.querySelectorAll('.calc__step').forEach(s => s.classList.remove('calc__step--active'));
+        calc.querySelector('[data-step="1"]').classList.add('calc__step--active');
+        selectedCar = null;
+        selectedService = null;
+    });
+})();
+</script>
+</body>
+</html>
